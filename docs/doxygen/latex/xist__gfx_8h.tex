@@ -1,0 +1,274 @@
+\doxysection{inc/xist\+\_\+gfx.h File Reference}
+\hypertarget{xist__gfx_8h}{}\label{xist__gfx_8h}\index{inc/xist\_gfx.h@{inc/xist\_gfx.h}}
+
+
+Graphics functionality.  
+
+
+{\ttfamily \#include "{}xist\+\_\+utils.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_xist_animation}{Xist\+Animation}}
+\begin{DoxyCompactList}\small\item\em Contains data needed for Xist16 to animate the sprites. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_xist_graphics_metadata}{Xist\+Graphics\+Metadata}}
+\begin{DoxyCompactList}\small\item\em Contains metadata needed for Xist16 to load and parse graphical data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\+\_\+\+MAX\+\_\+\+SPRITES}}~64
+\begin{DoxyCompactList}\small\item\em The maximum number of sprites supported. \end{DoxyCompactList}\item 
+\Hypertarget{xist__gfx_8h_a4a50c855ca1b7589d03bf43156166c34}\label{xist__gfx_8h_a4a50c855ca1b7589d03bf43156166c34} 
+\#define {\bfseries XIST\+\_\+\+SPRITE\+\_\+\+ACTIVE}~0b00000001
+\begin{DoxyCompactList}\small\item\em Bit in the sprite bitmask that determines if it is currently active. \end{DoxyCompactList}\item 
+\Hypertarget{xist__gfx_8h_a16453f0b03eb30e79c1e90a3a44996ca}\label{xist__gfx_8h_a16453f0b03eb30e79c1e90a3a44996ca} 
+\#define {\bfseries XIST\+\_\+\+SPRITE\+\_\+\+REPEATS}~0b00000010
+\begin{DoxyCompactList}\small\item\em Bit in the sprite bitmask that determines if it is a repeating animation. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{xist__gfx_8h_a126288d7b73bbe5db24ba168b830dbd7}{XIST\+\_\+\+SPRITE\+\_\+\+FINISHED}}~0b00000100
+\begin{DoxyCompactList}\small\item\em Bit in the sprite bitmask that determines if it the animation is finished playing. \end{DoxyCompactList}\item 
+\Hypertarget{xist__gfx_8h_af6b68bda05e6af605773f45668e12251}\label{xist__gfx_8h_af6b68bda05e6af605773f45668e12251} 
+\#define {\bfseries XIST\+\_\+\+SPRITE\+\_\+\+PALETTE\+\_\+\+OFFSET\+\_\+1}~0b00000001
+\item 
+\Hypertarget{xist__gfx_8h_a20799c9c4242ba65b9731113314cb942}\label{xist__gfx_8h_a20799c9c4242ba65b9731113314cb942} 
+\#define {\bfseries XIST\+\_\+\+SPRITE\+\_\+\+PALETTE\+\_\+\+OFFSET\+\_\+2}~0b00000010
+\item 
+\Hypertarget{xist__gfx_8h_ade62a7ea23b9412ce3e4da34f15d711f}\label{xist__gfx_8h_ade62a7ea23b9412ce3e4da34f15d711f} 
+\#define {\bfseries XIST\+\_\+\+SPRITE\+\_\+\+PALETTE\+\_\+\+OFFSET\+\_\+3}~0b00000100
+\item 
+\Hypertarget{xist__gfx_8h_a5a227fccca702622cb4b05e875494bd3}\label{xist__gfx_8h_a5a227fccca702622cb4b05e875494bd3} 
+\#define {\bfseries XIST\+\_\+\+SPRITE\+\_\+\+PALETTE\+\_\+\+OFFSET\+\_\+4}~0b00001000
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{xist__gfx_8h_a9c360512d685d4d9e3910cdda0b11dbd}{xist\+\_\+process\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em Animates all of the sprites in {\ttfamily xist\+\_\+sprite\+\_\+bank} within the supplied indices (inclusive). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{xist__gfx_8h_aca5193415b2d48a050cbc92f68605bca}{xist\+\_\+load\+\_\+graphic}} (unsigned short metadata\+\_\+index, BOOL to\+\_\+highram, unsigned char to\+\_\+highram\+\_\+bank, BOOL to\+\_\+upper\+\_\+vram, unsigned long vram\+\_\+address)
+\begin{DoxyCompactList}\small\item\em Loads the graphic file specified in the given metadata entry into either high-\/\+RAM or VRAM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{xist__gfx_8h_ac5738af259b2b05733f74040d2f6b357}{xist\+\_\+prepare\+\_\+sprite}} (unsigned short metadata\+\_\+index, BOOL copy\+\_\+to\+\_\+vram, unsigned long vram\+\_\+address, unsigned char highram\+\_\+bank, unsigned char sprite\+\_\+index, signed short x\+\_\+pos, signed short y\+\_\+pos, unsigned char add\+\_\+bitmask)
+\begin{DoxyCompactList}\small\item\em Readies a sprite which has been loaded into high-\/\+RAM for display and animation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{xist__gfx_8h_afd81cc6f6d79da46832025f2b133fd00}{xist\+\_\+update\+\_\+sprite\+\_\+position}} ()
+\begin{DoxyCompactList}\small\item\em Updates the position of the provided sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{xist__gfx_8h_a39646b08e3a5283401bfbc580c89e75c}\label{xist__gfx_8h_a39646b08e3a5283401bfbc580c89e75c} 
+struct \mbox{\hyperlink{struct_xist_animation}{Xist\+Animation}} {\bfseries xist\+\_\+sprite\+\_\+bank}
+\begin{DoxyCompactList}\small\item\em Contains data needed for Xist16 to animate the sprites. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{xist__gfx_8h_a38c44d9910132c9400e838f9cb54fa79}{xist\+\_\+proc\+\_\+sprite\+\_\+start\+\_\+idx}}
+\begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the function {\ttfamily xist\+\_\+process\+\_\+sprites}. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{xist__gfx_8h_abf92565b3e766d0ec2392e51722bcb5c}{xist\+\_\+proc\+\_\+sprite\+\_\+end\+\_\+idx}}
+\begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the function {\ttfamily xist\+\_\+process\+\_\+sprites}. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{xist__gfx_8h_ab133cdd9f230931ccc3ae10387fb4d5d}{xist\+\_\+curr\+\_\+sprite\+\_\+idx}}
+\begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the function {\ttfamily xist\+\_\+update\+\_\+sprite\+\_\+position}. \end{DoxyCompactList}\item 
+signed short \mbox{\hyperlink{xist__gfx_8h_ab7ca4cf1f0f8eed30274d3eb4951b1a6}{xist\+\_\+curr\+\_\+sprite\+\_\+x\+\_\+pos}}
+\begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the function {\ttfamily xist\+\_\+update\+\_\+sprite\+\_\+position}. \end{DoxyCompactList}\item 
+signed short \mbox{\hyperlink{xist__gfx_8h_ae55f5080fde95b221a7487357f7c0c2c}{xist\+\_\+curr\+\_\+sprite\+\_\+y\+\_\+pos}}
+\begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the function {\ttfamily xist\+\_\+update\+\_\+sprite\+\_\+position}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Graphics functionality. 
+
+Contains macros, structs, extern variables, and function signatures for Xist graphics functionality generally and sprites in particular. 
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}\label{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69} 
+\index{xist\_gfx.h@{xist\_gfx.h}!XIST\_MAX\_SPRITES@{XIST\_MAX\_SPRITES}}
+\index{XIST\_MAX\_SPRITES@{XIST\_MAX\_SPRITES}!xist\_gfx.h@{xist\_gfx.h}}
+\doxysubsubsection{\texorpdfstring{XIST\_MAX\_SPRITES}{XIST\_MAX\_SPRITES}}
+{\footnotesize\ttfamily \#define XIST\+\_\+\+MAX\+\_\+\+SPRITES~64}
+
+
+
+The maximum number of sprites supported. 
+
+Defines the maximum number of sprites your application will support and controls the size of {\ttfamily xist\+\_\+sprite\+\_\+bank}. The maximum possible value for this macro is 128 because that is the maximum number of sprites supported by the Commander X16. You should not set this value higher than necessary, because the higher you set this value, the more memory will be consumed, and processing more sprites will entail a greater processor strain. \Hypertarget{xist__gfx_8h_a126288d7b73bbe5db24ba168b830dbd7}\label{xist__gfx_8h_a126288d7b73bbe5db24ba168b830dbd7} 
+\index{xist\_gfx.h@{xist\_gfx.h}!XIST\_SPRITE\_FINISHED@{XIST\_SPRITE\_FINISHED}}
+\index{XIST\_SPRITE\_FINISHED@{XIST\_SPRITE\_FINISHED}!xist\_gfx.h@{xist\_gfx.h}}
+\doxysubsubsection{\texorpdfstring{XIST\_SPRITE\_FINISHED}{XIST\_SPRITE\_FINISHED}}
+{\footnotesize\ttfamily \#define XIST\+\_\+\+SPRITE\+\_\+\+FINISHED~0b00000100}
+
+
+
+Bit in the sprite bitmask that determines if it the animation is finished playing. 
+
+This value is only relevant to sprites that do not repeat, and will be set to 1 once the non-\/repeating sprite is finished animating. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{xist__gfx_8h_aca5193415b2d48a050cbc92f68605bca}\label{xist__gfx_8h_aca5193415b2d48a050cbc92f68605bca} 
+\index{xist\_gfx.h@{xist\_gfx.h}!xist\_load\_graphic@{xist\_load\_graphic}}
+\index{xist\_load\_graphic@{xist\_load\_graphic}!xist\_gfx.h@{xist\_gfx.h}}
+\doxysubsubsection{\texorpdfstring{xist\_load\_graphic()}{xist\_load\_graphic()}}
+{\footnotesize\ttfamily void xist\+\_\+load\+\_\+graphic (\begin{DoxyParamCaption}\item[{unsigned short}]{metadata\+\_\+index,  }\item[{BOOL}]{to\+\_\+highram,  }\item[{unsigned char}]{to\+\_\+highram\+\_\+bank,  }\item[{BOOL}]{to\+\_\+upper\+\_\+vram,  }\item[{unsigned long}]{vram\+\_\+address }\end{DoxyParamCaption})}
+
+
+
+Loads the graphic file specified in the given metadata entry into either high-\/\+RAM or VRAM. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em metadata\+\_\+index} & The row in your graphics metadata file that contains the information for this graphic. \\
+\hline
+{\em to\+\_\+highram} & Set to TRUE (1) to load the graphics into high-\/\+RAM, or FALSE (0) to load the graphics into VRAM. \\
+\hline
+{\em to\+\_\+highram\+\_\+bank} & The bank of high-\/\+RAM to load the image data into, if loading into high-\/\+RAM (ignored if {\ttfamily to\+\_\+highram} is set to FALSE). \\
+\hline
+{\em to\+\_\+upper\+\_\+vram} & If loading to VRAM, set this to TRUE to set the parameter into the Kernal’s LOAD function to 3, loading into VRAM starting from 0x10000 + the specified VRAM address. Set to FALSE to set the parameter into the Kernal’s LOAD function to 2, loading into VRAM starting from 0x00000 + the specified starting address. Ignored if {\ttfamily to\+\_\+highram} is set to TRUE. \\
+\hline
+{\em vram\+\_\+address} & If loading to VRAM, supply the VRAM address to load into with this parameter. Ignored if {\ttfamily to\+\_\+highram} is set to TRUE. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_xist_graphics_metadata}{Xist\+Graphics\+Metadata} 
+\end{DoxySeeAlso}
+\Hypertarget{xist__gfx_8h_ac5738af259b2b05733f74040d2f6b357}\label{xist__gfx_8h_ac5738af259b2b05733f74040d2f6b357} 
+\index{xist\_gfx.h@{xist\_gfx.h}!xist\_prepare\_sprite@{xist\_prepare\_sprite}}
+\index{xist\_prepare\_sprite@{xist\_prepare\_sprite}!xist\_gfx.h@{xist\_gfx.h}}
+\doxysubsubsection{\texorpdfstring{xist\_prepare\_sprite()}{xist\_prepare\_sprite()}}
+{\footnotesize\ttfamily void xist\+\_\+prepare\+\_\+sprite (\begin{DoxyParamCaption}\item[{unsigned short}]{metadata\+\_\+index,  }\item[{BOOL}]{copy\+\_\+to\+\_\+vram,  }\item[{unsigned long}]{vram\+\_\+address,  }\item[{unsigned char}]{highram\+\_\+bank,  }\item[{unsigned char}]{sprite\+\_\+index,  }\item[{signed short}]{x\+\_\+pos,  }\item[{signed short}]{y\+\_\+pos,  }\item[{unsigned char}]{add\+\_\+bitmask }\end{DoxyParamCaption})}
+
+
+
+Readies a sprite which has been loaded into high-\/\+RAM for display and animation. 
+
+Prepares a sprite whose graphical data has already been loaded into high-\/\+RAM for display and animation. It sets up all the necessary parameters for the sprite using the given index into {\ttfamily xist\+\_\+sprite\+\_\+bank} (which is also the same as the sprite\textquotesingle{}s index in the CX16\textquotesingle{}s sprite metadata). Can also be directed to copy the sprite\textquotesingle{}s graphical data from high-\/\+RAM into VRAM.
+
+
+\begin{DoxyParams}{Parameters}
+{\em metadata\+\_\+index} & The row in your graphics metadata file that contains the information for this sprite. \\
+\hline
+{\em copy\+\_\+to\+\_\+vram} & Set to TRUE if you want to copy the image data from high-\/\+RAM into VRAM. The use case for setting this to FALSE is if you have many sprites that use the same image data, in which case you could set this to TRUE when preparing the first sprite and FALSE for all subsequent calls to save a lot of unnecessary copying. \\
+\hline
+{\em vram\+\_\+address} & If loading to VRAM, supply the VRAM address to load into with this parameter. Ignored if to\+\_\+ vram is set to FALSE. \\
+\hline
+{\em highram\+\_\+bank} & The high-\/\+RAM bank that contains the image data to be copied. \\
+\hline
+{\em sprite\+\_\+index} & The index of the sprite in both the xist\+\_\+sprite\+\_\+bank and the Commander X16’s sprite metadata. \\
+\hline
+{\em x\+\_\+pos} & The onscreen X position (in pixels) to display the sprite at. \\
+\hline
+{\em y\+\_\+pos} & The onscreen Y position (in pixels) to display the sprite at. \\
+\hline
+{\em add\+\_\+bitmask} & A bitmask with any flags you want to turn on for this sprite. By far the most common use case would be to provide {\ttfamily XIST\+\_\+\+SPRITE\+\_\+\+ACTIVE} to make the sprite immediately active for use.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_xist_animation}{Xist\+Animation} 
+
+\doxylink{struct_xist_graphics_metadata}{Xist\+Graphics\+Metadata} 
+
+\doxylink{xist__gfx_8h_a39646b08e3a5283401bfbc580c89e75c}{xist\+\_\+sprite\+\_\+bank} 
+\end{DoxySeeAlso}
+\Hypertarget{xist__gfx_8h_a9c360512d685d4d9e3910cdda0b11dbd}\label{xist__gfx_8h_a9c360512d685d4d9e3910cdda0b11dbd} 
+\index{xist\_gfx.h@{xist\_gfx.h}!xist\_process\_sprites@{xist\_process\_sprites}}
+\index{xist\_process\_sprites@{xist\_process\_sprites}!xist\_gfx.h@{xist\_gfx.h}}
+\doxysubsubsection{\texorpdfstring{xist\_process\_sprites()}{xist\_process\_sprites()}}
+{\footnotesize\ttfamily void xist\+\_\+process\+\_\+sprites (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Animates all of the sprites in {\ttfamily xist\+\_\+sprite\+\_\+bank} within the supplied indices (inclusive). 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__gfx_8h_a38c44d9910132c9400e838f9cb54fa79}{xist\+\_\+proc\+\_\+sprite\+\_\+start\+\_\+idx} 
+
+\doxylink{xist__gfx_8h_abf92565b3e766d0ec2392e51722bcb5c}{xist\+\_\+proc\+\_\+sprite\+\_\+end\+\_\+idx}
+\end{DoxySeeAlso}
+As a performance optimization, this function uses global variables as virtual parameters. It performs all the necessary updates to the sprite metadata in {\ttfamily xist\+\_\+sprite\+\_\+bank} and the Commander X16\textquotesingle{}s metadata in VRAM (including updating the address where the graphics for the next frame of animation are stored in VRAM) necessary to animate all the sprites specified by the start and end indices. It ignores sprites that aren\textquotesingle{}t set to active or which have finished animating (the latter does not apply to sprites with repeating animations). \Hypertarget{xist__gfx_8h_afd81cc6f6d79da46832025f2b133fd00}\label{xist__gfx_8h_afd81cc6f6d79da46832025f2b133fd00} 
+\index{xist\_gfx.h@{xist\_gfx.h}!xist\_update\_sprite\_position@{xist\_update\_sprite\_position}}
+\index{xist\_update\_sprite\_position@{xist\_update\_sprite\_position}!xist\_gfx.h@{xist\_gfx.h}}
+\doxysubsubsection{\texorpdfstring{xist\_update\_sprite\_position()}{xist\_update\_sprite\_position()}}
+{\footnotesize\ttfamily void xist\+\_\+update\+\_\+sprite\+\_\+position (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Updates the position of the provided sprite. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__gfx_8h_ab133cdd9f230931ccc3ae10387fb4d5d}{xist\+\_\+curr\+\_\+sprite\+\_\+idx} 
+
+\doxylink{xist__gfx_8h_ab7ca4cf1f0f8eed30274d3eb4951b1a6}{xist\+\_\+curr\+\_\+sprite\+\_\+x\+\_\+pos} 
+
+\doxylink{xist__gfx_8h_ae55f5080fde95b221a7487357f7c0c2c}{xist\+\_\+curr\+\_\+sprite\+\_\+y\+\_\+pos}
+\end{DoxySeeAlso}
+As a performance optimization, this function uses global variables as virtual parameters. It updates the position of the given sprite in both {\ttfamily xist\+\_\+sprite\+\_\+bank} and the Commander X16\textquotesingle{}s sprite metadata in VRAM. {\ttfamily xist\+\_\+curr\+\_\+sprite\+\_\+idx} indicates the index of the sprite to be updated, while {\ttfamily xist\+\_\+curr\+\_\+sprite\+\_\+x\+\_\+pos} and {\ttfamily xist\+\_\+curr\+\_\+sprite\+\_\+y\+\_\+pos} indicate the screen X and Y position (in pixels) to set the sprite to.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{xist__gfx_8h_ab133cdd9f230931ccc3ae10387fb4d5d}\label{xist__gfx_8h_ab133cdd9f230931ccc3ae10387fb4d5d} 
+\index{xist\_gfx.h@{xist\_gfx.h}!xist\_curr\_sprite\_idx@{xist\_curr\_sprite\_idx}}
+\index{xist\_curr\_sprite\_idx@{xist\_curr\_sprite\_idx}!xist\_gfx.h@{xist\_gfx.h}}
+\doxysubsubsection{\texorpdfstring{xist\_curr\_sprite\_idx}{xist\_curr\_sprite\_idx}}
+{\footnotesize\ttfamily unsigned char xist\+\_\+curr\+\_\+sprite\+\_\+idx\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Acts as a virtual parameter for the function {\ttfamily xist\+\_\+update\+\_\+sprite\+\_\+position}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__gfx_8h_afd81cc6f6d79da46832025f2b133fd00}{xist\+\_\+update\+\_\+sprite\+\_\+position}
+\end{DoxySeeAlso}
+Sets the index for the sprite in {\ttfamily xist\+\_\+sprite\+\_\+bank} whose position will be updated. \Hypertarget{xist__gfx_8h_ab7ca4cf1f0f8eed30274d3eb4951b1a6}\label{xist__gfx_8h_ab7ca4cf1f0f8eed30274d3eb4951b1a6} 
+\index{xist\_gfx.h@{xist\_gfx.h}!xist\_curr\_sprite\_x\_pos@{xist\_curr\_sprite\_x\_pos}}
+\index{xist\_curr\_sprite\_x\_pos@{xist\_curr\_sprite\_x\_pos}!xist\_gfx.h@{xist\_gfx.h}}
+\doxysubsubsection{\texorpdfstring{xist\_curr\_sprite\_x\_pos}{xist\_curr\_sprite\_x\_pos}}
+{\footnotesize\ttfamily signed short xist\+\_\+curr\+\_\+sprite\+\_\+x\+\_\+pos\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Acts as a virtual parameter for the function {\ttfamily xist\+\_\+update\+\_\+sprite\+\_\+position}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__gfx_8h_afd81cc6f6d79da46832025f2b133fd00}{xist\+\_\+update\+\_\+sprite\+\_\+position}
+\end{DoxySeeAlso}
+Sets the new X position (in pixels) for the sprite to be updated. \Hypertarget{xist__gfx_8h_ae55f5080fde95b221a7487357f7c0c2c}\label{xist__gfx_8h_ae55f5080fde95b221a7487357f7c0c2c} 
+\index{xist\_gfx.h@{xist\_gfx.h}!xist\_curr\_sprite\_y\_pos@{xist\_curr\_sprite\_y\_pos}}
+\index{xist\_curr\_sprite\_y\_pos@{xist\_curr\_sprite\_y\_pos}!xist\_gfx.h@{xist\_gfx.h}}
+\doxysubsubsection{\texorpdfstring{xist\_curr\_sprite\_y\_pos}{xist\_curr\_sprite\_y\_pos}}
+{\footnotesize\ttfamily signed short xist\+\_\+curr\+\_\+sprite\+\_\+y\+\_\+pos\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Acts as a virtual parameter for the function {\ttfamily xist\+\_\+update\+\_\+sprite\+\_\+position}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__gfx_8h_afd81cc6f6d79da46832025f2b133fd00}{xist\+\_\+update\+\_\+sprite\+\_\+position}
+\end{DoxySeeAlso}
+Sets the new Y position (in pixels) for the sprite to be updated. \Hypertarget{xist__gfx_8h_abf92565b3e766d0ec2392e51722bcb5c}\label{xist__gfx_8h_abf92565b3e766d0ec2392e51722bcb5c} 
+\index{xist\_gfx.h@{xist\_gfx.h}!xist\_proc\_sprite\_end\_idx@{xist\_proc\_sprite\_end\_idx}}
+\index{xist\_proc\_sprite\_end\_idx@{xist\_proc\_sprite\_end\_idx}!xist\_gfx.h@{xist\_gfx.h}}
+\doxysubsubsection{\texorpdfstring{xist\_proc\_sprite\_end\_idx}{xist\_proc\_sprite\_end\_idx}}
+{\footnotesize\ttfamily unsigned char xist\+\_\+proc\+\_\+sprite\+\_\+end\+\_\+idx\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Acts as a virtual parameter for the function {\ttfamily xist\+\_\+process\+\_\+sprites}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__gfx_8h_a9c360512d685d4d9e3910cdda0b11dbd}{xist\+\_\+process\+\_\+sprites}
+\end{DoxySeeAlso}
+Sets the end index (inclusive) for the sprites to process in {\ttfamily xist\+\_\+sprite\+\_\+bank}. \Hypertarget{xist__gfx_8h_a38c44d9910132c9400e838f9cb54fa79}\label{xist__gfx_8h_a38c44d9910132c9400e838f9cb54fa79} 
+\index{xist\_gfx.h@{xist\_gfx.h}!xist\_proc\_sprite\_start\_idx@{xist\_proc\_sprite\_start\_idx}}
+\index{xist\_proc\_sprite\_start\_idx@{xist\_proc\_sprite\_start\_idx}!xist\_gfx.h@{xist\_gfx.h}}
+\doxysubsubsection{\texorpdfstring{xist\_proc\_sprite\_start\_idx}{xist\_proc\_sprite\_start\_idx}}
+{\footnotesize\ttfamily unsigned char xist\+\_\+proc\+\_\+sprite\+\_\+start\+\_\+idx\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Acts as a virtual parameter for the function {\ttfamily xist\+\_\+process\+\_\+sprites}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__gfx_8h_a9c360512d685d4d9e3910cdda0b11dbd}{xist\+\_\+process\+\_\+sprites}
+\end{DoxySeeAlso}
+Sets the start index (inclusive) for the sprites to process in {\ttfamily xist\+\_\+sprite\+\_\+bank}. 

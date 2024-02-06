@@ -1,0 +1,271 @@
+\doxysection{inc/xist\+\_\+text.h File Reference}
+\hypertarget{xist__text_8h}{}\label{xist__text_8h}\index{inc/xist\_text.h@{inc/xist\_text.h}}
+
+
+Text rendering functionality.  
+
+
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{xist__text_8h_aa3db6e737d0edd8d1426825700a64262}\label{xist__text_8h_aa3db6e737d0edd8d1426825700a64262} 
+\#define {\bfseries XIST\+\_\+\+TYPEWRITER\+\_\+\+TEXT\+\_\+\+ROWS}~10
+\item 
+\Hypertarget{xist__text_8h_affc3370ec298b0f8d852f8b25ee856bb}\label{xist__text_8h_affc3370ec298b0f8d852f8b25ee856bb} 
+\#define {\bfseries XIST\+\_\+\+TYPEWRITER\+\_\+\+TEXT\+\_\+\+COLUMNS}~36
+\item 
+\Hypertarget{xist__text_8h_af290666385055963cc46d216e465c4e8}\label{xist__text_8h_af290666385055963cc46d216e465c4e8} 
+\#define {\bfseries XIST\+\_\+\+TEXT\+\_\+\+COLOR\+\_\+\+WHITE}~0b00000000
+\item 
+\Hypertarget{xist__text_8h_af1008c3568d2065e3a90e75daaeb309a}\label{xist__text_8h_af1008c3568d2065e3a90e75daaeb309a} 
+\#define {\bfseries XIST\+\_\+\+TEXT\+\_\+\+COLOR\+\_\+\+BLACK}~0b00010000
+\item 
+\Hypertarget{xist__text_8h_a8633547c6fa970fb56fa3ecbc37b030f}\label{xist__text_8h_a8633547c6fa970fb56fa3ecbc37b030f} 
+\#define {\bfseries XIST\+\_\+\+TEXT\+\_\+\+COLOR\+\_\+\+BURGUNDY}~0b00100000
+\item 
+\Hypertarget{xist__text_8h_adc95f4b469d58bee78664fe6d13bc8f9}\label{xist__text_8h_adc95f4b469d58bee78664fe6d13bc8f9} 
+\#define {\bfseries XIST\+\_\+\+TEXT\+\_\+\+COLOR\+\_\+\+RED}~0b00110000
+\item 
+\Hypertarget{xist__text_8h_a4c470e7e269235429e830b0b6cd90185}\label{xist__text_8h_a4c470e7e269235429e830b0b6cd90185} 
+\#define {\bfseries XIST\+\_\+\+TEXT\+\_\+\+COLOR\+\_\+\+YELLOW}~0b01000000
+\item 
+\Hypertarget{xist__text_8h_a57b796fd9e67473b64ce12217c1459ca}\label{xist__text_8h_a57b796fd9e67473b64ce12217c1459ca} 
+\#define {\bfseries XIST\+\_\+\+TEXT\+\_\+\+COLOR\+\_\+\+UMBER}~0b01010000
+\item 
+\Hypertarget{xist__text_8h_a967b29d5c5c78bdc50835071095cb3bf}\label{xist__text_8h_a967b29d5c5c78bdc50835071095cb3bf} 
+\#define {\bfseries XIST\+\_\+\+TEXT\+\_\+\+COLOR\+\_\+\+PINE}~0b01100000
+\item 
+\Hypertarget{xist__text_8h_a648242d9cfc18de0218f1b5e20dec374}\label{xist__text_8h_a648242d9cfc18de0218f1b5e20dec374} 
+\#define {\bfseries XIST\+\_\+\+TEXT\+\_\+\+COLOR\+\_\+\+GREEN}~0b01110000
+\item 
+\Hypertarget{xist__text_8h_a3bebb7a2b8747814e882f04cd9ca3730}\label{xist__text_8h_a3bebb7a2b8747814e882f04cd9ca3730} 
+\#define {\bfseries XIST\+\_\+\+TEXT\+\_\+\+COLOR\+\_\+\+MINT}~0b10000000
+\item 
+\Hypertarget{xist__text_8h_aa11bbe63999ff9c40095bfb27d8b00fd}\label{xist__text_8h_aa11bbe63999ff9c40095bfb27d8b00fd} 
+\#define {\bfseries XIST\+\_\+\+TEXT\+\_\+\+COLOR\+\_\+\+SLATE}~0b10010000
+\item 
+\Hypertarget{xist__text_8h_a92546682296058e9ad570d6e7675d6e9}\label{xist__text_8h_a92546682296058e9ad570d6e7675d6e9} 
+\#define {\bfseries XIST\+\_\+\+TEXT\+\_\+\+COLOR\+\_\+\+CYAN}~0b10100000
+\item 
+\Hypertarget{xist__text_8h_a3fe4d1bffd31d7117af7733f667b1394}\label{xist__text_8h_a3fe4d1bffd31d7117af7733f667b1394} 
+\#define {\bfseries XIST\+\_\+\+TEXT\+\_\+\+COLOR\+\_\+\+GRAY}~0b10110000
+\item 
+\Hypertarget{xist__text_8h_a49443dba46f9aea73e3319da21aa0d59}\label{xist__text_8h_a49443dba46f9aea73e3319da21aa0d59} 
+\#define {\bfseries XIST\+\_\+\+TEXT\+\_\+\+COLOR\+\_\+\+MIDNIGHT}~0b11000000
+\item 
+\Hypertarget{xist__text_8h_a55ff932be6c73829f05caadaede4fc77}\label{xist__text_8h_a55ff932be6c73829f05caadaede4fc77} 
+\#define {\bfseries XIST\+\_\+\+TEXT\+\_\+\+COLOR\+\_\+\+INDIGO}~0b11010000
+\item 
+\Hypertarget{xist__text_8h_afb5f7f4679a8818442e62f84268bf5d0}\label{xist__text_8h_afb5f7f4679a8818442e62f84268bf5d0} 
+\#define {\bfseries XIST\+\_\+\+TEXT\+\_\+\+COLOR\+\_\+\+PURPLE}~0b11100000
+\item 
+\Hypertarget{xist__text_8h_a54e39a5f31ad021b8958386fc4c77c76}\label{xist__text_8h_a54e39a5f31ad021b8958386fc4c77c76} 
+\#define {\bfseries XIST\+\_\+\+TEXT\+\_\+\+COLOR\+\_\+\+PINK}~0b11110000
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{xist__text_8h_aad24022acaf449c720d5292d9f03abaf}\label{xist__text_8h_aad24022acaf449c720d5292d9f03abaf} 
+void {\bfseries xist\+\_\+clear\+\_\+text} ()
+\begin{DoxyCompactList}\small\item\em Clears all text glyphs from the screen (on tile layer 1). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{xist__text_8h_a7f70be91b3f01483155b20cb0e1e8176}{xist\+\_\+initialize\+\_\+text\+\_\+tiles}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the Commander X16 state for use with Xist16\textquotesingle{}s text drawing functionality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{xist__text_8h_ae3f468d1a6bac47d1cf5f3ed2be34032}{xist\+\_\+draw\+\_\+text}} ()
+\begin{DoxyCompactList}\small\item\em Renders the provided text string at the provided coordinates. \end{DoxyCompactList}\item 
+\Hypertarget{xist__text_8h_a55e874850dd9cf78e587eac0f2c68fda}\label{xist__text_8h_a55e874850dd9cf78e587eac0f2c68fda} 
+void {\bfseries xist\+\_\+reset\+\_\+typewriter\+\_\+counters} ()
+\begin{DoxyCompactList}\small\item\em Resets the variables used to render typewriter text. Call before rendering typewriter text. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{xist__text_8h_a8e95bb68f12ab5151dbad2212eb06c6a}{xist\+\_\+draw\+\_\+typewriter\+\_\+text}} ()
+\begin{DoxyCompactList}\small\item\em Renders the next character in the multdimensional {\ttfamily xist\+\_\+typewriter\+\_\+text} array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{xist__text_8h_ae393abe378631edcbcdda55a6f53af49}{xist\+\_\+replace\+\_\+substring}} (char \texorpdfstring{$\ast$}{*}str, const char \texorpdfstring{$\ast$}{*}placeholder, const char \texorpdfstring{$\ast$}{*}replacement)
+\begin{DoxyCompactList}\small\item\em Replaces the first occurrence of {\ttfamily placeholder} in {\ttfamily str} with {\ttfamily replacement}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{xist__text_8h_abbd4b6b7da82572e150491d120c54ef9}{xist\+\_\+typewriter\+\_\+text}} \mbox{[}XIST\+\_\+\+TYPEWRITER\+\_\+\+TEXT\+\_\+\+ROWS\mbox{]}\mbox{[}XIST\+\_\+\+TYPEWRITER\+\_\+\+TEXT\+\_\+\+COLUMNS\mbox{]}
+\begin{DoxyCompactList}\small\item\em Multidimensional array to hold strings to be rendered as typewriter text. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{xist__text_8h_a5ec60b34a36244a820b0dc8e174814e9}{xist\+\_\+text}}
+\begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the function {\ttfamily xist\+\_\+draw\+\_\+text}. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{xist__text_8h_aa152d3fa513b33b304465f092fc34ebb}{xist\+\_\+text\+\_\+tile\+\_\+x}}
+\begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the function {\ttfamily xist\+\_\+draw\+\_\+text}. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{xist__text_8h_aa7d234e43a229ac56f777ba9bd74ecf2}{xist\+\_\+text\+\_\+tile\+\_\+y}}
+\begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the function {\ttfamily xist\+\_\+draw\+\_\+text}. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{xist__text_8h_ae58185a9a9ae9635274a822e8d080abc}{xist\+\_\+tw\+\_\+text\+\_\+tile\+\_\+x}}
+\begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the function {\ttfamily xist\+\_\+draw\+\_\+typewriter\+\_\+text}. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{xist__text_8h_af4cf6673098ef04a2824dc52b0c7af83}{xist\+\_\+tw\+\_\+text\+\_\+tile\+\_\+y}}
+\begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the function {\ttfamily xist\+\_\+draw\+\_\+typewriter\+\_\+text}. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{xist__text_8h_a5955bdf6675f29558daf8f8039115e11}{xist\+\_\+palette\+\_\+offset}}
+\begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the functions {\ttfamily xist\+\_\+draw\+\_\+text} and {\ttfamily xist\+\_\+draw\+\_\+typewriter\+\_\+text}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Text rendering functionality. 
+
+Contains macros, global variables, and function signatures for rendering and handling text. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{xist__text_8h_ae3f468d1a6bac47d1cf5f3ed2be34032}\label{xist__text_8h_ae3f468d1a6bac47d1cf5f3ed2be34032} 
+\index{xist\_text.h@{xist\_text.h}!xist\_draw\_text@{xist\_draw\_text}}
+\index{xist\_draw\_text@{xist\_draw\_text}!xist\_text.h@{xist\_text.h}}
+\doxysubsubsection{\texorpdfstring{xist\_draw\_text()}{xist\_draw\_text()}}
+{\footnotesize\ttfamily void xist\+\_\+draw\+\_\+text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Renders the provided text string at the provided coordinates. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__text_8h_a5ec60b34a36244a820b0dc8e174814e9}{xist\+\_\+text} 
+
+\doxylink{xist__text_8h_aa152d3fa513b33b304465f092fc34ebb}{xist\+\_\+text\+\_\+tile\+\_\+x} 
+
+\doxylink{xist__text_8h_aa7d234e43a229ac56f777ba9bd74ecf2}{xist\+\_\+text\+\_\+tile\+\_\+y} 
+
+\doxylink{xist__text_8h_a5955bdf6675f29558daf8f8039115e11}{xist\+\_\+palette\+\_\+offset}
+\end{DoxySeeAlso}
+As a performance optimization, this function uses global variables as virtual parameters. When called, it draws the glyphs for the characters in the provided string left-\/aligned on the provided coordinates. Set {\ttfamily xist\+\_\+text\+\_\+tile\+\_\+x} to the X position (in TILE coordinates) of the first character of the string. Set {\ttfamily xist\+\_\+text\+\_\+tile\+\_\+y} to the Y position (in TILE coordinates) of the row where you want to draw the string. Point {\ttfamily xist\+\_\+text} to the string you want rendered. You can also set {\ttfamily xist\+\_\+palette\+\_\+offset} to a non-\/zero value to change the color of the text. Use the macros defined in this file as an easy reference for the available colors. IMPORTANT NOTE\+: Your strings must be arrays of raw ASCII codes, not hard-\/coded strings, because cc65 encodes hard-\/coded strings using non-\/standard encoding that doesn\textquotesingle{}t work with Xist16\textquotesingle{}s text drawing routines. IMPORTANT NOTE 2\+: Always remember to null-\/terminate your strings (the last value in the string should be 0) or the behavior of this function is UNDEFINED. \Hypertarget{xist__text_8h_a8e95bb68f12ab5151dbad2212eb06c6a}\label{xist__text_8h_a8e95bb68f12ab5151dbad2212eb06c6a} 
+\index{xist\_text.h@{xist\_text.h}!xist\_draw\_typewriter\_text@{xist\_draw\_typewriter\_text}}
+\index{xist\_draw\_typewriter\_text@{xist\_draw\_typewriter\_text}!xist\_text.h@{xist\_text.h}}
+\doxysubsubsection{\texorpdfstring{xist\_draw\_typewriter\_text()}{xist\_draw\_typewriter\_text()}}
+{\footnotesize\ttfamily void xist\+\_\+draw\+\_\+typewriter\+\_\+text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Renders the next character in the multdimensional {\ttfamily xist\+\_\+typewriter\+\_\+text} array. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__text_8h_abbd4b6b7da82572e150491d120c54ef9}{xist\+\_\+typewriter\+\_\+text} 
+
+\doxylink{xist__text_8h_ae58185a9a9ae9635274a822e8d080abc}{xist\+\_\+tw\+\_\+text\+\_\+tile\+\_\+x} 
+
+\doxylink{xist__text_8h_af4cf6673098ef04a2824dc52b0c7af83}{xist\+\_\+tw\+\_\+text\+\_\+tile\+\_\+y} 
+
+\doxylink{xist__text_8h_a5955bdf6675f29558daf8f8039115e11}{xist\+\_\+palette\+\_\+offset}
+\end{DoxySeeAlso}
+As a performance optimization, this function uses global variables as virtual parameters. To use this function, fill the {\ttfamily xist\+\_\+typewriter\+\_\+text} multidimensional array with the strings you wish to render one character at a time. Then, call this function each time you want to render the next character in that array. You can control the speed at which the typewriter text is rendered by how many game ticks (i.\+e., iterations of your game loop) you wait in between the next call to this function. I.\+e., if your game loop runs at 60 Hz, call this function once per iteration to render 60 characters per second. Call it every other iteration to render 30 characters per second, etc. Set {\ttfamily xist\+\_\+tw\+\_\+text\+\_\+tile\+\_\+x} to the X position (in TILE coordinates) of the left column of the text to be rendered. Set {\ttfamily xist\+\_\+text\+\_\+tile\+\_\+y} to the Y position (in TILE coordinates) of the top row of the text to be rendered. You can also set {\ttfamily xist\+\_\+palette\+\_\+offset} to a non-\/zero value to change the color of the text. Use the macros defined in this file as an easy reference for the available colors. IMPORTANT NOTE\+: Your strings must be arrays of raw ASCII codes, not hard-\/coded strings, because cc65 encodes hard-\/coded strings using non-\/standard encoding that doesn\textquotesingle{}t work with Xist16\textquotesingle{}s text drawing routines. IMPORTANT NOTE 2\+: Always remember to null-\/terminate your strings (the last value in the string should be 0) or the behavior of this function is UNDEFINED. \Hypertarget{xist__text_8h_a7f70be91b3f01483155b20cb0e1e8176}\label{xist__text_8h_a7f70be91b3f01483155b20cb0e1e8176} 
+\index{xist\_text.h@{xist\_text.h}!xist\_initialize\_text\_tiles@{xist\_initialize\_text\_tiles}}
+\index{xist\_initialize\_text\_tiles@{xist\_initialize\_text\_tiles}!xist\_text.h@{xist\_text.h}}
+\doxysubsubsection{\texorpdfstring{xist\_initialize\_text\_tiles()}{xist\_initialize\_text\_tiles()}}
+{\footnotesize\ttfamily void xist\+\_\+initialize\+\_\+text\+\_\+tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the Commander X16 state for use with Xist16\textquotesingle{}s text drawing functionality. 
+
+Loads the sysf.\+img file which contains the font glyphs into VRAM and initializes all the tiles on layer 1 to display no text (technically a space). Must be called before you use any other text drawing functions. Typically you would call this early in your program\textquotesingle{}s initialization after calling {\ttfamily xist\+\_\+initialize\+\_\+tiles}. \Hypertarget{xist__text_8h_ae393abe378631edcbcdda55a6f53af49}\label{xist__text_8h_ae393abe378631edcbcdda55a6f53af49} 
+\index{xist\_text.h@{xist\_text.h}!xist\_replace\_substring@{xist\_replace\_substring}}
+\index{xist\_replace\_substring@{xist\_replace\_substring}!xist\_text.h@{xist\_text.h}}
+\doxysubsubsection{\texorpdfstring{xist\_replace\_substring()}{xist\_replace\_substring()}}
+{\footnotesize\ttfamily void xist\+\_\+replace\+\_\+substring (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{placeholder,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{replacement }\end{DoxyParamCaption})}
+
+
+
+Replaces the first occurrence of {\ttfamily placeholder} in {\ttfamily str} with {\ttfamily replacement}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char\texorpdfstring{$\ast$}{*}} & str The string containing the placeholder substring \\
+\hline
+{\em char\texorpdfstring{$\ast$}{*}} & placeholder The placeholder substring to be replaced; must be of equal or greater length than the string that will replace it \\
+\hline
+{\em char\texorpdfstring{$\ast$}{*}} & replacement The string to replace the placeholder substring with\\
+\hline
+\end{DoxyParams}
+Replaces the first occurrence of {\ttfamily placeholder} in {\ttfamily str} with {\ttfamily replacement}. {\ttfamily placeholder} must be of equal or greater length to {\ttfamily replacement}. IMPORTANT NOTE\+: Your strings must be arrays of raw ASCII codes, not hard-\/coded strings, because cc65 encodes hard-\/coded strings using non-\/standard encoding that doesn\textquotesingle{}t work with Xist16\textquotesingle{}s text drawing routines. IMPORTANT NOTE 2\+: Always remember to null-\/terminate your strings (the last value in the string should be 0) or the behavior of this function is UNDEFINED. 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{xist__text_8h_a5955bdf6675f29558daf8f8039115e11}\label{xist__text_8h_a5955bdf6675f29558daf8f8039115e11} 
+\index{xist\_text.h@{xist\_text.h}!xist\_palette\_offset@{xist\_palette\_offset}}
+\index{xist\_palette\_offset@{xist\_palette\_offset}!xist\_text.h@{xist\_text.h}}
+\doxysubsubsection{\texorpdfstring{xist\_palette\_offset}{xist\_palette\_offset}}
+{\footnotesize\ttfamily unsigned char xist\+\_\+palette\+\_\+offset\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Acts as a virtual parameter for the functions {\ttfamily xist\+\_\+draw\+\_\+text} and {\ttfamily xist\+\_\+draw\+\_\+typewriter\+\_\+text}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__text_8h_ae3f468d1a6bac47d1cf5f3ed2be34032}{xist\+\_\+draw\+\_\+text} 
+
+\doxylink{xist__text_8h_a8e95bb68f12ab5151dbad2212eb06c6a}{xist\+\_\+draw\+\_\+typewriter\+\_\+text}
+\end{DoxySeeAlso}
+Set to a non-\/zero value to palette-\/shift the text to render it in different colors. Use the macros defined in this file for easy access to the available colors. \Hypertarget{xist__text_8h_a5ec60b34a36244a820b0dc8e174814e9}\label{xist__text_8h_a5ec60b34a36244a820b0dc8e174814e9} 
+\index{xist\_text.h@{xist\_text.h}!xist\_text@{xist\_text}}
+\index{xist\_text@{xist\_text}!xist\_text.h@{xist\_text.h}}
+\doxysubsubsection{\texorpdfstring{xist\_text}{xist\_text}}
+{\footnotesize\ttfamily char\texorpdfstring{$\ast$}{*} xist\+\_\+text\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Acts as a virtual parameter for the function {\ttfamily xist\+\_\+draw\+\_\+text}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__text_8h_ae3f468d1a6bac47d1cf5f3ed2be34032}{xist\+\_\+draw\+\_\+text}
+\end{DoxySeeAlso}
+Sets the text to be rendered when {\ttfamily xist\+\_\+draw\+\_\+text} is called. IMPORTANT NOTE\+: Your strings must be arrays of raw ASCII codes, not hard-\/coded strings, because cc65 encodes hard-\/coded strings using non-\/standard encoding that doesn\textquotesingle{}t work with Xist16\textquotesingle{}s text drawing routines. IMPORTANT NOTE 2\+: Always remember to null-\/terminate your strings (the last value in the string should be 0) or the behavior of this function is UNDEFINED. \Hypertarget{xist__text_8h_aa152d3fa513b33b304465f092fc34ebb}\label{xist__text_8h_aa152d3fa513b33b304465f092fc34ebb} 
+\index{xist\_text.h@{xist\_text.h}!xist\_text\_tile\_x@{xist\_text\_tile\_x}}
+\index{xist\_text\_tile\_x@{xist\_text\_tile\_x}!xist\_text.h@{xist\_text.h}}
+\doxysubsubsection{\texorpdfstring{xist\_text\_tile\_x}{xist\_text\_tile\_x}}
+{\footnotesize\ttfamily unsigned char xist\+\_\+text\+\_\+tile\+\_\+x\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Acts as a virtual parameter for the function {\ttfamily xist\+\_\+draw\+\_\+text}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__text_8h_ae3f468d1a6bac47d1cf5f3ed2be34032}{xist\+\_\+draw\+\_\+text}
+\end{DoxySeeAlso}
+Sets the X position (in TILE coordinates) for the leftmost character of the string to be rendered by {\ttfamily xist\+\_\+draw\+\_\+text}. \Hypertarget{xist__text_8h_aa7d234e43a229ac56f777ba9bd74ecf2}\label{xist__text_8h_aa7d234e43a229ac56f777ba9bd74ecf2} 
+\index{xist\_text.h@{xist\_text.h}!xist\_text\_tile\_y@{xist\_text\_tile\_y}}
+\index{xist\_text\_tile\_y@{xist\_text\_tile\_y}!xist\_text.h@{xist\_text.h}}
+\doxysubsubsection{\texorpdfstring{xist\_text\_tile\_y}{xist\_text\_tile\_y}}
+{\footnotesize\ttfamily unsigned char xist\+\_\+text\+\_\+tile\+\_\+y\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Acts as a virtual parameter for the function {\ttfamily xist\+\_\+draw\+\_\+text}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__text_8h_ae3f468d1a6bac47d1cf5f3ed2be34032}{xist\+\_\+draw\+\_\+text}
+\end{DoxySeeAlso}
+Sets the Y position (in TILE coordinates) for the row where you wish to render the string with {\ttfamily xist\+\_\+draw\+\_\+text}. \Hypertarget{xist__text_8h_ae58185a9a9ae9635274a822e8d080abc}\label{xist__text_8h_ae58185a9a9ae9635274a822e8d080abc} 
+\index{xist\_text.h@{xist\_text.h}!xist\_tw\_text\_tile\_x@{xist\_tw\_text\_tile\_x}}
+\index{xist\_tw\_text\_tile\_x@{xist\_tw\_text\_tile\_x}!xist\_text.h@{xist\_text.h}}
+\doxysubsubsection{\texorpdfstring{xist\_tw\_text\_tile\_x}{xist\_tw\_text\_tile\_x}}
+{\footnotesize\ttfamily unsigned char xist\+\_\+tw\+\_\+text\+\_\+tile\+\_\+x\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Acts as a virtual parameter for the function {\ttfamily xist\+\_\+draw\+\_\+typewriter\+\_\+text}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__text_8h_a8e95bb68f12ab5151dbad2212eb06c6a}{xist\+\_\+draw\+\_\+typewriter\+\_\+text}
+\end{DoxySeeAlso}
+Sets the X position (in TILE coordinates) for the upper-\/left corner of the strings to be rendered by {\ttfamily xist\+\_\+draw\+\_\+typewriter\+\_\+text}. \Hypertarget{xist__text_8h_af4cf6673098ef04a2824dc52b0c7af83}\label{xist__text_8h_af4cf6673098ef04a2824dc52b0c7af83} 
+\index{xist\_text.h@{xist\_text.h}!xist\_tw\_text\_tile\_y@{xist\_tw\_text\_tile\_y}}
+\index{xist\_tw\_text\_tile\_y@{xist\_tw\_text\_tile\_y}!xist\_text.h@{xist\_text.h}}
+\doxysubsubsection{\texorpdfstring{xist\_tw\_text\_tile\_y}{xist\_tw\_text\_tile\_y}}
+{\footnotesize\ttfamily unsigned char xist\+\_\+tw\+\_\+text\+\_\+tile\+\_\+y\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Acts as a virtual parameter for the function {\ttfamily xist\+\_\+draw\+\_\+typewriter\+\_\+text}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__text_8h_a8e95bb68f12ab5151dbad2212eb06c6a}{xist\+\_\+draw\+\_\+typewriter\+\_\+text}
+\end{DoxySeeAlso}
+Sets the Y position (in TILE coordinates) for the upper-\/left corner of the strings to be rendered by {\ttfamily xist\+\_\+draw\+\_\+typewriter\+\_\+text}. \Hypertarget{xist__text_8h_abbd4b6b7da82572e150491d120c54ef9}\label{xist__text_8h_abbd4b6b7da82572e150491d120c54ef9} 
+\index{xist\_text.h@{xist\_text.h}!xist\_typewriter\_text@{xist\_typewriter\_text}}
+\index{xist\_typewriter\_text@{xist\_typewriter\_text}!xist\_text.h@{xist\_text.h}}
+\doxysubsubsection{\texorpdfstring{xist\_typewriter\_text}{xist\_typewriter\_text}}
+{\footnotesize\ttfamily char xist\+\_\+typewriter\+\_\+text\mbox{[}XIST\+\_\+\+TYPEWRITER\+\_\+\+TEXT\+\_\+\+ROWS\mbox{]}\mbox{[}XIST\+\_\+\+TYPEWRITER\+\_\+\+TEXT\+\_\+\+COLUMNS\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Multidimensional array to hold strings to be rendered as typewriter text. 
+
+Populate this array with strings you wish to render one character at a time to create a "{}typewriter text"{} effect. Then call {\ttfamily xist\+\_\+draw\+\_\+typewriter\+\_\+text} for each game tick you want to render the next character in these strings. IMPORTANT NOTE\+: Your strings must be arrays of raw ASCII codes, not hard-\/coded strings, because cc65 encodes hard-\/coded strings using non-\/standard encoding that doesn\textquotesingle{}t work with Xist16\textquotesingle{}s text drawing routines. IMPORTANT NOTE 2\+: Always remember to null-\/terminate your strings (the last value in the string should be 0) or the behavior of this function is UNDEFINED.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__text_8h_a8e95bb68f12ab5151dbad2212eb06c6a}{xist\+\_\+draw\+\_\+typewriter\+\_\+text} 
+\end{DoxySeeAlso}

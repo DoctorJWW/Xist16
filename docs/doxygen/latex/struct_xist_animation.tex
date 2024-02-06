@@ -1,0 +1,99 @@
+\doxysection{Xist\+Animation Struct Reference}
+\hypertarget{struct_xist_animation}{}\label{struct_xist_animation}\index{XistAnimation@{XistAnimation}}
+
+
+Contains data needed for Xist16 to animate the sprites.  
+
+
+
+
+{\ttfamily \#include $<$xist\+\_\+gfx.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+unsigned short \mbox{\hyperlink{struct_xist_animation_a11778809d3e4ff804ad6d0f2f4507571}{first\+\_\+frame\+\_\+address}} \mbox{[}\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\+\_\+\+MAX\+\_\+\+SPRITES}}\mbox{]}
+\item 
+unsigned short \mbox{\hyperlink{struct_xist_animation_ade70cf189479f961714f816c6af4b686}{address\+\_\+offset}} \mbox{[}\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\+\_\+\+MAX\+\_\+\+SPRITES}}\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{struct_xist_animation_a6420a0beee60fcecffc8efac9125cb90}{num\+\_\+frames}} \mbox{[}\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\+\_\+\+MAX\+\_\+\+SPRITES}}\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{struct_xist_animation_abd784d2275d61369cae8a631fb776996}{current\+\_\+frame}} \mbox{[}\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\+\_\+\+MAX\+\_\+\+SPRITES}}\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{struct_xist_animation_a15937db3ab52518e2b42f0e1c29aa9ed}{frame\+\_\+delay}} \mbox{[}\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\+\_\+\+MAX\+\_\+\+SPRITES}}\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{struct_xist_animation_a89d910d31975a2d75b3191fee88154d8}{frame\+\_\+timer}} \mbox{[}\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\+\_\+\+MAX\+\_\+\+SPRITES}}\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{struct_xist_animation_a279d459b8c19b7df399bfb82b831cdb2}{bitmask}} \mbox{[}\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\+\_\+\+MAX\+\_\+\+SPRITES}}\mbox{]}
+\item 
+signed short \mbox{\hyperlink{struct_xist_animation_a4b9a57fd60de024db4666e1c126e85aa}{x\+\_\+pos}} \mbox{[}\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\+\_\+\+MAX\+\_\+\+SPRITES}}\mbox{]}
+\item 
+signed short \mbox{\hyperlink{struct_xist_animation_a5d65d74e943e1d02d1464beee2d1c0c6}{y\+\_\+pos}} \mbox{[}\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\+\_\+\+MAX\+\_\+\+SPRITES}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains data needed for Xist16 to animate the sprites. 
+
+This is defined as a struct of arrays rather than an array of structs as an important performance optimization due to the 6502\textquotesingle{}s architecture. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{struct_xist_animation_ade70cf189479f961714f816c6af4b686}\label{struct_xist_animation_ade70cf189479f961714f816c6af4b686} 
+\index{XistAnimation@{XistAnimation}!address\_offset@{address\_offset}}
+\index{address\_offset@{address\_offset}!XistAnimation@{XistAnimation}}
+\doxysubsubsection{\texorpdfstring{address\_offset}{address\_offset}}
+{\footnotesize\ttfamily unsigned short Xist\+Animation\+::address\+\_\+offset\mbox{[}\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\+\_\+\+MAX\+\_\+\+SPRITES}}\mbox{]}}
+
+Size in bytes of each frame of animation (every frame must be the same size). \Hypertarget{struct_xist_animation_a279d459b8c19b7df399bfb82b831cdb2}\label{struct_xist_animation_a279d459b8c19b7df399bfb82b831cdb2} 
+\index{XistAnimation@{XistAnimation}!bitmask@{bitmask}}
+\index{bitmask@{bitmask}!XistAnimation@{XistAnimation}}
+\doxysubsubsection{\texorpdfstring{bitmask}{bitmask}}
+{\footnotesize\ttfamily unsigned char Xist\+Animation\+::bitmask\mbox{[}\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\+\_\+\+MAX\+\_\+\+SPRITES}}\mbox{]}}
+
+bytes from low (right) to high (left)\+: Active, Repeats, Finished animating -\/-\/---FRA \Hypertarget{struct_xist_animation_abd784d2275d61369cae8a631fb776996}\label{struct_xist_animation_abd784d2275d61369cae8a631fb776996} 
+\index{XistAnimation@{XistAnimation}!current\_frame@{current\_frame}}
+\index{current\_frame@{current\_frame}!XistAnimation@{XistAnimation}}
+\doxysubsubsection{\texorpdfstring{current\_frame}{current\_frame}}
+{\footnotesize\ttfamily unsigned char Xist\+Animation\+::current\+\_\+frame\mbox{[}\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\+\_\+\+MAX\+\_\+\+SPRITES}}\mbox{]}}
+
+The current frame of animation being displayed. \Hypertarget{struct_xist_animation_a11778809d3e4ff804ad6d0f2f4507571}\label{struct_xist_animation_a11778809d3e4ff804ad6d0f2f4507571} 
+\index{XistAnimation@{XistAnimation}!first\_frame\_address@{first\_frame\_address}}
+\index{first\_frame\_address@{first\_frame\_address}!XistAnimation@{XistAnimation}}
+\doxysubsubsection{\texorpdfstring{first\_frame\_address}{first\_frame\_address}}
+{\footnotesize\ttfamily unsigned short Xist\+Animation\+::first\+\_\+frame\+\_\+address\mbox{[}\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\+\_\+\+MAX\+\_\+\+SPRITES}}\mbox{]}}
+
+VRAM address of the first frame of graphical data. \Hypertarget{struct_xist_animation_a15937db3ab52518e2b42f0e1c29aa9ed}\label{struct_xist_animation_a15937db3ab52518e2b42f0e1c29aa9ed} 
+\index{XistAnimation@{XistAnimation}!frame\_delay@{frame\_delay}}
+\index{frame\_delay@{frame\_delay}!XistAnimation@{XistAnimation}}
+\doxysubsubsection{\texorpdfstring{frame\_delay}{frame\_delay}}
+{\footnotesize\ttfamily unsigned char Xist\+Animation\+::frame\+\_\+delay\mbox{[}\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\+\_\+\+MAX\+\_\+\+SPRITES}}\mbox{]}}
+
+The number of game ticks to display each frame. \Hypertarget{struct_xist_animation_a89d910d31975a2d75b3191fee88154d8}\label{struct_xist_animation_a89d910d31975a2d75b3191fee88154d8} 
+\index{XistAnimation@{XistAnimation}!frame\_timer@{frame\_timer}}
+\index{frame\_timer@{frame\_timer}!XistAnimation@{XistAnimation}}
+\doxysubsubsection{\texorpdfstring{frame\_timer}{frame\_timer}}
+{\footnotesize\ttfamily unsigned char Xist\+Animation\+::frame\+\_\+timer\mbox{[}\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\+\_\+\+MAX\+\_\+\+SPRITES}}\mbox{]}}
+
+Current value of the sprite\textquotesingle{}s frame timer. \Hypertarget{struct_xist_animation_a6420a0beee60fcecffc8efac9125cb90}\label{struct_xist_animation_a6420a0beee60fcecffc8efac9125cb90} 
+\index{XistAnimation@{XistAnimation}!num\_frames@{num\_frames}}
+\index{num\_frames@{num\_frames}!XistAnimation@{XistAnimation}}
+\doxysubsubsection{\texorpdfstring{num\_frames}{num\_frames}}
+{\footnotesize\ttfamily unsigned char Xist\+Animation\+::num\+\_\+frames\mbox{[}\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\+\_\+\+MAX\+\_\+\+SPRITES}}\mbox{]}}
+
+Total number of frames of animation in this sprite. \Hypertarget{struct_xist_animation_a4b9a57fd60de024db4666e1c126e85aa}\label{struct_xist_animation_a4b9a57fd60de024db4666e1c126e85aa} 
+\index{XistAnimation@{XistAnimation}!x\_pos@{x\_pos}}
+\index{x\_pos@{x\_pos}!XistAnimation@{XistAnimation}}
+\doxysubsubsection{\texorpdfstring{x\_pos}{x\_pos}}
+{\footnotesize\ttfamily signed short Xist\+Animation\+::x\+\_\+pos\mbox{[}\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\+\_\+\+MAX\+\_\+\+SPRITES}}\mbox{]}}
+
+The sprite\textquotesingle{}s current X position onscreen, in pixels. \Hypertarget{struct_xist_animation_a5d65d74e943e1d02d1464beee2d1c0c6}\label{struct_xist_animation_a5d65d74e943e1d02d1464beee2d1c0c6} 
+\index{XistAnimation@{XistAnimation}!y\_pos@{y\_pos}}
+\index{y\_pos@{y\_pos}!XistAnimation@{XistAnimation}}
+\doxysubsubsection{\texorpdfstring{y\_pos}{y\_pos}}
+{\footnotesize\ttfamily signed short Xist\+Animation\+::y\+\_\+pos\mbox{[}\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\+\_\+\+MAX\+\_\+\+SPRITES}}\mbox{]}}
+
+The sprite\textquotesingle{}s current Y position onscreen, in pixels. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{xist__gfx_8h}{xist\+\_\+gfx.\+h}}\end{DoxyCompactItemize}

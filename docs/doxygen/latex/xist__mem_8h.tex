@@ -1,0 +1,171 @@
+\doxysection{inc/xist\+\_\+mem.h File Reference}
+\hypertarget{xist__mem_8h}{}\label{xist__mem_8h}\index{inc/xist\_mem.h@{inc/xist\_mem.h}}
+
+
+Functionality for loading and managing memory.  
+
+
+{\ttfamily \#include "{}xist\+\_\+utils.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{xist__mem_8h_ace313b9dd3eb6e716dfaede1ad259c29}\label{xist__mem_8h_ace313b9dd3eb6e716dfaede1ad259c29} 
+\#define {\bfseries BANK\+\_\+\+NUM}~(\texorpdfstring{$\ast$}{*}(unsigned char \texorpdfstring{$\ast$}{*})0x00)
+\item 
+\Hypertarget{xist__mem_8h_a30ab9da60435727bc80839d416461b8f}\label{xist__mem_8h_a30ab9da60435727bc80839d416461b8f} 
+\#define {\bfseries R0}~(\texorpdfstring{$\ast$}{*}(unsigned short \texorpdfstring{$\ast$}{*})0x02)
+\item 
+\Hypertarget{xist__mem_8h_a918f64eb53db8e8dc694f36a87646476}\label{xist__mem_8h_a918f64eb53db8e8dc694f36a87646476} 
+\#define {\bfseries R1}~(\texorpdfstring{$\ast$}{*}(unsigned short \texorpdfstring{$\ast$}{*})0x04)
+\item 
+\Hypertarget{xist__mem_8h_a7a255a2815b9453060f51c6eb22cfed8}\label{xist__mem_8h_a7a255a2815b9453060f51c6eb22cfed8} 
+\#define {\bfseries R2}~(\texorpdfstring{$\ast$}{*}(unsigned short \texorpdfstring{$\ast$}{*})0x06)
+\item 
+\Hypertarget{xist__mem_8h_ac6e2cb1d29cf6a3b5849c8f22fc22581}\label{xist__mem_8h_ac6e2cb1d29cf6a3b5849c8f22fc22581} 
+\#define {\bfseries XIST\+\_\+\+BANKED\+\_\+\+RAM\+\_\+\+ADDRESS}~0x\+A000\+UL
+\item 
+\Hypertarget{xist__mem_8h_a65f545c735cf2afc6a97d655efe3fc39}\label{xist__mem_8h_a65f545c735cf2afc6a97d655efe3fc39} 
+\#define {\bfseries XIST\+\_\+\+LAYER\+\_\+1\+\_\+\+TILE\+\_\+\+BASE}~0x0000\+UL
+\item 
+\Hypertarget{xist__mem_8h_a778dd2d183feb3830e37bf7acf65da53}\label{xist__mem_8h_a778dd2d183feb3830e37bf7acf65da53} 
+\#define {\bfseries XIST\+\_\+\+LAYER\+\_\+1\+\_\+\+MAPBASE}~0x2000\+UL
+\item 
+\Hypertarget{xist__mem_8h_ae50cdaef41ff7bc3ce6c23f3afdd02d0}\label{xist__mem_8h_ae50cdaef41ff7bc3ce6c23f3afdd02d0} 
+\#define {\bfseries XIST\+\_\+\+LAYER\+\_\+0\+\_\+\+MAPBASE}~0x3000\+UL
+\item 
+\Hypertarget{xist__mem_8h_aaf21e0df10721c3513d24f89f54a796f}\label{xist__mem_8h_aaf21e0df10721c3513d24f89f54a796f} 
+\#define {\bfseries XIST\+\_\+\+LAYER\+\_\+0\+\_\+\+TILE\+\_\+\+BASE}~0x5000\+UL
+\item 
+\Hypertarget{xist__mem_8h_a1361dafc51964e488e748c09cad5aed6}\label{xist__mem_8h_a1361dafc51964e488e748c09cad5aed6} 
+\#define {\bfseries XIST\+\_\+\+VRAM\+\_\+\+SPRITE\+\_\+\+IMAGE\+\_\+\+DATA}~0x9000\+UL
+\item 
+\Hypertarget{xist__mem_8h_a1ae2192925e0bc157d2fda9368fda4ea}\label{xist__mem_8h_a1ae2192925e0bc157d2fda9368fda4ea} 
+\#define {\bfseries XIST\+\_\+\+VRAM\+\_\+\+SPRITE\+\_\+0\+\_\+\+ADDRESS}~0x1\+FC00\+UL
+\item 
+\Hypertarget{xist__mem_8h_a2512223f6483b7f70b679a19c17f0b4f}\label{xist__mem_8h_a2512223f6483b7f70b679a19c17f0b4f} 
+\#define {\bfseries XIST\+\_\+\+VRAM\+\_\+\+SPRITE\+\_\+1\+\_\+\+ADDRESS}~0x1\+FC08\+UL
+\item 
+\Hypertarget{xist__mem_8h_add20bb0e28592834b554b75649021f46}\label{xist__mem_8h_add20bb0e28592834b554b75649021f46} 
+\#define {\bfseries XIST\+\_\+\+SPRITE\+\_\+\+METADATA\+\_\+\+BANK}~63
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{xist__mem_8h_a176931c046bf44556228d2a295ea5264}{xist\+\_\+load\+\_\+file\+\_\+to\+\_\+highram}} (const char \texorpdfstring{$\ast$}{*}filename, unsigned char bank)
+\begin{DoxyCompactList}\small\item\em Loads the specified file into the specified high-\/\+RAM bank. \end{DoxyCompactList}\item 
+\Hypertarget{xist__mem_8h_a97bb2ee5b39f6cfdce9e9acb7e06d667}\label{xist__mem_8h_a97bb2ee5b39f6cfdce9e9acb7e06d667} 
+void {\bfseries xist\+\_\+load\+\_\+file\+\_\+to\+\_\+vram} (const char \texorpdfstring{$\ast$}{*}filename, BOOL to\+\_\+upper, unsigned long vram\+\_\+address)
+\item 
+void \mbox{\hyperlink{xist__mem_8h_ade5e8940fa129c1404fde6510599c66e}{xist\+\_\+copy\+\_\+highram\+\_\+to\+\_\+vram}} (unsigned long vram\+\_\+address, unsigned char bank, unsigned short mem\+\_\+offset, unsigned short num\+\_\+bytes)
+\begin{DoxyCompactList}\small\item\em Copies data from the specified high-\/\+RAM bank to the specified address in VRAM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{xist__mem_8h_a96ff5c1ce06973414cc04de58267fa05}{xist\+\_\+copy\+\_\+highram\+\_\+to\+\_\+vram\+\_\+partial}} (unsigned long vram\+\_\+address, unsigned char highram\+\_\+bank, unsigned char x\+\_\+offset, unsigned char y\+\_\+offset, unsigned char gfx\+\_\+width, unsigned char gfx\+\_\+height, unsigned char h\+\_\+width)
+\begin{DoxyCompactList}\small\item\em Copies a rectangular segment of graphical data from the specified high-\/\+RAM bank to the specified address in VRAM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{xist__mem_8h_ac2122eeabf2bcbbb499a98f89993c89b}{xist\+\_\+copy\+\_\+highram\+\_\+to\+\_\+vram\+\_\+using\+\_\+metadata}} (unsigned long vram\+\_\+address, unsigned char highram\+\_\+bank, unsigned short metadata\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Copies a segment of graphical data from the specified high-\/\+RAM bank to the specified address in VRAM using data from the graphics metadata file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functionality for loading and managing memory. 
+
+Contains macros and function signatures for loading and managing memory and defining important memory addresses in VRAM. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{xist__mem_8h_ade5e8940fa129c1404fde6510599c66e}\label{xist__mem_8h_ade5e8940fa129c1404fde6510599c66e} 
+\index{xist\_mem.h@{xist\_mem.h}!xist\_copy\_highram\_to\_vram@{xist\_copy\_highram\_to\_vram}}
+\index{xist\_copy\_highram\_to\_vram@{xist\_copy\_highram\_to\_vram}!xist\_mem.h@{xist\_mem.h}}
+\doxysubsubsection{\texorpdfstring{xist\_copy\_highram\_to\_vram()}{xist\_copy\_highram\_to\_vram()}}
+{\footnotesize\ttfamily void xist\+\_\+copy\+\_\+highram\+\_\+to\+\_\+vram (\begin{DoxyParamCaption}\item[{unsigned long}]{vram\+\_\+address,  }\item[{unsigned char}]{bank,  }\item[{unsigned short}]{mem\+\_\+offset,  }\item[{unsigned short}]{num\+\_\+bytes }\end{DoxyParamCaption})}
+
+
+
+Copies data from the specified high-\/\+RAM bank to the specified address in VRAM. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & long vram\+\_\+address VRAM address to copy the data to \\
+\hline
+{\em unsigned} & char bank High-\/\+RAM bank to copy the data from \\
+\hline
+{\em unsigned} & short mem\+\_\+offset Number of bytes from the start of the high-\/\+RAM bank to start copying from \\
+\hline
+{\em unsigned} & short num\+\_\+bytes Number of bytes to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{xist__mem_8h_a96ff5c1ce06973414cc04de58267fa05}\label{xist__mem_8h_a96ff5c1ce06973414cc04de58267fa05} 
+\index{xist\_mem.h@{xist\_mem.h}!xist\_copy\_highram\_to\_vram\_partial@{xist\_copy\_highram\_to\_vram\_partial}}
+\index{xist\_copy\_highram\_to\_vram\_partial@{xist\_copy\_highram\_to\_vram\_partial}!xist\_mem.h@{xist\_mem.h}}
+\doxysubsubsection{\texorpdfstring{xist\_copy\_highram\_to\_vram\_partial()}{xist\_copy\_highram\_to\_vram\_partial()}}
+{\footnotesize\ttfamily void xist\+\_\+copy\+\_\+highram\+\_\+to\+\_\+vram\+\_\+partial (\begin{DoxyParamCaption}\item[{unsigned long}]{vram\+\_\+address,  }\item[{unsigned char}]{highram\+\_\+bank,  }\item[{unsigned char}]{x\+\_\+offset,  }\item[{unsigned char}]{y\+\_\+offset,  }\item[{unsigned char}]{gfx\+\_\+width,  }\item[{unsigned char}]{gfx\+\_\+height,  }\item[{unsigned char}]{h\+\_\+width }\end{DoxyParamCaption})}
+
+
+
+Copies a rectangular segment of graphical data from the specified high-\/\+RAM bank to the specified address in VRAM. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & long vram\+\_\+address VRAM address to copy the data to \\
+\hline
+{\em unsigned} & char highram\+\_\+bank High-\/\+RAM bank to copy the data from \\
+\hline
+{\em unsigned} & char x\+\_\+offset Number of pixels from the left side of the image data to start copying from \\
+\hline
+{\em unsigned} & char y\+\_\+offset Number of pixels from the top of the image data to start copying from \\
+\hline
+{\em unsigned} & char gfx\+\_\+width The width in pixels of the area of graphical data to copy \\
+\hline
+{\em unsigned} & char gfx\+\_\+height The height in pixels of the area of graphical data to copy \\
+\hline
+{\em unsigned} & char h\+\_\+width The total width of the graphical data segment being copied from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{xist__mem_8h_ac2122eeabf2bcbbb499a98f89993c89b}\label{xist__mem_8h_ac2122eeabf2bcbbb499a98f89993c89b} 
+\index{xist\_mem.h@{xist\_mem.h}!xist\_copy\_highram\_to\_vram\_using\_metadata@{xist\_copy\_highram\_to\_vram\_using\_metadata}}
+\index{xist\_copy\_highram\_to\_vram\_using\_metadata@{xist\_copy\_highram\_to\_vram\_using\_metadata}!xist\_mem.h@{xist\_mem.h}}
+\doxysubsubsection{\texorpdfstring{xist\_copy\_highram\_to\_vram\_using\_metadata()}{xist\_copy\_highram\_to\_vram\_using\_metadata()}}
+{\footnotesize\ttfamily void xist\+\_\+copy\+\_\+highram\+\_\+to\+\_\+vram\+\_\+using\+\_\+metadata (\begin{DoxyParamCaption}\item[{unsigned long}]{vram\+\_\+address,  }\item[{unsigned char}]{highram\+\_\+bank,  }\item[{unsigned short}]{metadata\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Copies a segment of graphical data from the specified high-\/\+RAM bank to the specified address in VRAM using data from the graphics metadata file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & long vram\+\_\+address VRAM address to copy the data to \\
+\hline
+{\em unsigned} & char highram\+\_\+bank High-\/\+RAM bank to copy the data from \\
+\hline
+{\em unsigned} & short metadata\+\_\+index The row in your sprite metadata that contains the data for the graphic to be copied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_xist_graphics_metadata}{Xist\+Graphics\+Metadata} 
+\end{DoxySeeAlso}
+\Hypertarget{xist__mem_8h_a176931c046bf44556228d2a295ea5264}\label{xist__mem_8h_a176931c046bf44556228d2a295ea5264} 
+\index{xist\_mem.h@{xist\_mem.h}!xist\_load\_file\_to\_highram@{xist\_load\_file\_to\_highram}}
+\index{xist\_load\_file\_to\_highram@{xist\_load\_file\_to\_highram}!xist\_mem.h@{xist\_mem.h}}
+\doxysubsubsection{\texorpdfstring{xist\_load\_file\_to\_highram()}{xist\_load\_file\_to\_highram()}}
+{\footnotesize\ttfamily void xist\+\_\+load\+\_\+file\+\_\+to\+\_\+highram (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{unsigned char}]{bank }\end{DoxyParamCaption})}
+
+
+
+Loads the specified file into the specified high-\/\+RAM bank. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & char \texorpdfstring{$\ast$}{*}filename Name of the file to load into high-\/\+RAM, including the file extension. \\
+\hline
+{\em unsigned} & char bank The bank of high-\/\+RAM to load the file into. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

@@ -1,0 +1,79 @@
+\doxysection{xist\+\_\+tiles.\+h}
+\hypertarget{xist__tiles_8h_source}{}\label{xist__tiles_8h_source}\index{inc/xist\_tiles.h@{inc/xist\_tiles.h}}
+\mbox{\hyperlink{xist__tiles_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ XIST\_TILES\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ XIST\_TILES\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ XIST\_TILE\_PALETTE\_OFFSET\_1\ \ 0b00010000}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ XIST\_TILE\_PALETTE\_OFFSET\_2\ \ 0b00100000}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ XIST\_TILE\_PALETTE\_OFFSET\_3\ \ 0b01000000}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ XIST\_TILE\_PALETTE\_OFFSET\_4\ \ 0b10000000}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ Important\ terminology\ to\ remember:}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ MapBase\ =\ The\ space\ dedicated\ to\ your\ tile\ metadata\ (which\ graphic\ each\ tile\ is\ pointing\ to).}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ There\ are\ 2\ separate\ MapBases,\ for\ layer\ 0\ (drawn\ behind)\ and\ layer\ 1\ (drawn\ in\ front).}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ The\ default\ Xist16\ assumption\ is\ that\ layer\ 1\ is\ dedicated\ to\ text\ display.}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ The\ amount\ of\ space\ required\ for\ the\ MapBase\ depends\ on\ the\ dimensions\ of\ each\ layer.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ TileBase\ =\ The\ graphical\ data\ for\ your\ tile\ layers.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ The\ amount\ of\ space\ required\ for\ the\ TileBase\ depends\ on\ how\ many\ tile\ graphics\ you\ have.}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ Set\ the\ dimensions\ for\ your\ tile\ layer\ 0\ below\ and\ the\ xist\_initialize\_tiles()\ function}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ will\ take\ care\ of\ configuring\ all\ the\ other\ values\ needed\ by\ the\ VERA.}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ Then,\ in\ xist\_mem.h,\ make\ sure\ to\ supply\ enough\ space\ for\ your\ tile\ layers.\ Remember\ that}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ each\ tile\ needs\ 2\ bytes!}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ Edit\ these\ to\ values\ appropriate\ to\ your\ game's\ background\ tiles:}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ LAYER\_0\_MAPBASE\_WIDTH\ 64}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ LAYER\_0\_MAPBASE\_HEIGHT\ 64}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ LAYER\_0\_MAPBASE\_TOTAL\ 4096}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ LAYER\_0\_TILE\_DIMENSIONS\ 16}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{comment}{//\ Don't\ edit\ these\ if\ you\ want\ to\ use\ the\ text\ drawing\ functions:}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ LAYER\_1\_MAPBASE\_WIDTH\ 64}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ LAYER\_1\_MAPBASE\_HEIGHT\ 32}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ LAYER\_1\_MAPBASE\_TOTAL\ 2048}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ LAYER\_1\_WIDTH\_BITMASK\ \ 0b00010000}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ LAYER\_1\_HEIGHT\_BITMASK\ 0b00000000}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ LAYER\_1\_SCREEN\_TILE\_WIDTH\ \ 40}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ LAYER\_1\_SCREEN\_TILE\_HEIGHT\ 30}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ LAYER\_1\_TILE\_DIMENSIONS\ 8}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ LAYER\_1\_BYTE4\_BITMASK\ \ 0b00000000}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ XIST\_MAX\_MAP\_TILE\_GRAPHICS\ 64}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00094\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{xist__tiles_8h_a078bf96c095240cfff965c82e1b0a79f}{xist\_map\_tiles}}[\mbox{\hyperlink{xist__tiles_8h_aa95b3f3b90fb808e64cdae72dceeddc7}{LAYER\_0\_MAPBASE\_TOTAL}}];}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00112\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{xist__tiles_8h_a25eeca358a205029474a4f1389a33481}{xist\_tile\_animations}}[\mbox{\hyperlink{xist__tiles_8h_a9eebad67a3d155b16121bac092d9c63a}{XIST\_MAX\_MAP\_TILE\_GRAPHICS}}];}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00122\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{xist__tiles_8h_a454f52c2a17be04177051cfbdd8e5bec}{xist\_tile\_animation\_time\_trigger}};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00134\ \textcolor{keyword}{extern}\ BOOL\ \mbox{\hyperlink{xist__tiles_8h_a7a6e08a33629380eac3b3d7f2fd25b8c}{xist\_allow\_tile\_scroll\_wrap}};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00145\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{xist__tiles_8h_abc443a51b9b0436a1023e25afc581796}{xist\_tilemap\_width\_pix}};\ }
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00156\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{xist__tiles_8h_a66ef78f20eaa489135626897073aab3d}{xist\_tilemap\_height\_pix}};}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00162\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{xist__tiles_8h_ae882773113ec63feed76794b02ed4c70}{xist\_camera\_x}};}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00168\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{short}\ \ \mbox{\hyperlink{xist__tiles_8h_a9abb1ae95753209506a8fbaef553385c}{xist\_camera\_y}};}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00177\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{xist__tiles_8h_afee57b58fbfbe2b1e810525f06000c19}{xist\_camera\_change\_x}};}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00186\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{char}\ \ \mbox{\hyperlink{xist__tiles_8h_a3b3a96ece43571dea71de82094ff9acd}{xist\_camera\_change\_y}};}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00196\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{xist__tiles_8h_aee326c92d69f2f2332f8ab473ca6e445}{xist\_initialize\_tiles}}();}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00213\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{xist__tiles_8h_a0c3dd1f728ce5f5b929278b7c6e5dd2b}{xist\_scroll\_camera}}();}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00227\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{xist__tiles_8h_a03ce66d667fd7f99146710f0bb8911d0}{xist\_animate\_map\_tiles}}();}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

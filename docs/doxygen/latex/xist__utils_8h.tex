@@ -1,0 +1,157 @@
+\doxysection{inc/xist\+\_\+utils.h File Reference}
+\hypertarget{xist__utils_8h}{}\label{xist__utils_8h}\index{inc/xist\_utils.h@{inc/xist\_utils.h}}
+
+
+Miscellaneous utility functionality.  
+
+
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{xist__utils_8h_ab133b6a87465dcd0cdfd63e282dc1dd8}\label{xist__utils_8h_ab133b6a87465dcd0cdfd63e282dc1dd8} 
+\#define {\bfseries XIST\+\_\+\+RESOLUTION\+\_\+\+WIDTH}~320
+\item 
+\Hypertarget{xist__utils_8h_a20f16146adb0070c5be781e630cad57c}\label{xist__utils_8h_a20f16146adb0070c5be781e630cad57c} 
+\#define {\bfseries XIST\+\_\+\+RESOLUTION\+\_\+\+HEIGHT}~240
+\item 
+\Hypertarget{xist__utils_8h_ae4cc35dcc70810fa972cc8a5185a28fa}\label{xist__utils_8h_ae4cc35dcc70810fa972cc8a5185a28fa} 
+\#define {\bfseries BOOL}~unsigned char
+\item 
+\Hypertarget{xist__utils_8h_aa8cecfc5c5c054d2875c03e77b7be15d}\label{xist__utils_8h_aa8cecfc5c5c054d2875c03e77b7be15d} 
+\#define {\bfseries TRUE}~1
+\item 
+\Hypertarget{xist__utils_8h_aa93f0eb578d23995850d61f7d61c55c1}\label{xist__utils_8h_aa93f0eb578d23995850d61f7d61c55c1} 
+\#define {\bfseries FALSE}~0
+\item 
+\Hypertarget{xist__utils_8h_a2b912ed39df233b43d7a093814705afb}\label{xist__utils_8h_a2b912ed39df233b43d7a093814705afb} 
+\#define {\bfseries EVER}~;;
+\item 
+\Hypertarget{xist__utils_8h_a4573d66c39112d3bcfd507bb14681bfe}\label{xist__utils_8h_a4573d66c39112d3bcfd507bb14681bfe} 
+\#define {\bfseries XIST\+\_\+\+RANDOM\+\_\+\+TABLE\+\_\+\+LENGTH}
+\item 
+\Hypertarget{xist__utils_8h_a2767febf3074fc859c37b46356fffb3c}\label{xist__utils_8h_a2767febf3074fc859c37b46356fffb3c} 
+\#define {\bfseries MAX\+\_\+\+SIGNED\+\_\+\+INT\+\_\+\+CHARS}~12
+\begin{DoxyCompactList}\small\item\em Maximum number of characters (including negative sign and null terminator) for numerical data to be converted into text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{xist__utils_8h_ae0e973c34dfc2062b912fd60c4815bad}\label{xist__utils_8h_ae0e973c34dfc2062b912fd60c4815bad} 
+void {\bfseries xist\+\_\+wait} ()
+\begin{DoxyCompactList}\small\item\em Call this once per iteration of your main game loop to synchronize your game to 60 frames per second. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{xist__utils_8h_aba7b15bf170f6bdbe72ff1298c2513c1}{xist\+\_\+convert\+\_\+long\+\_\+to\+\_\+ascii\+\_\+array}} (signed long num, char \texorpdfstring{$\ast$}{*}result)
+\begin{DoxyCompactList}\small\item\em Converts provided integer to its string representation. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{xist__utils_8h_ac86d113141fded8e7726821a0d84948a}{xist\+\_\+rand}} ()
+\begin{DoxyCompactList}\small\item\em Generates a random number between the values indicated by {\ttfamily xist\+\_\+rand\+\_\+min} and {\ttfamily xist\+\_\+rand\+\_\+max} (inclusive) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \mbox{\hyperlink{xist__utils_8h_ad34ea1eb158ad1ea5cc2228c42c61bf8}{xist\+\_\+seed\+\_\+a}}
+\begin{DoxyCompactList}\small\item\em Current index into one of the two tables that {\ttfamily xist\+\_\+rand} uses to generate pseudorandom numbers. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{xist__utils_8h_a0738d2e3ba815bfd44afc973c6ba417f}{xist\+\_\+seed\+\_\+b}}
+\begin{DoxyCompactList}\small\item\em Current index into one of the two tables that {\ttfamily xist\+\_\+rand} uses to generate pseudorandom numbers. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{xist__utils_8h_a3ad74b60c07aa4ce85726e256b45d3b3}{xist\+\_\+rand\+\_\+min}}
+\begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the function {\ttfamily xist\+\_\+rand}. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{xist__utils_8h_ad5023a5fad68a98cc5a3a5c6a4ead05f}{xist\+\_\+rand\+\_\+max}}
+\begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the function {\ttfamily xist\+\_\+rand}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Miscellaneous utility functionality. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{xist__utils_8h_aba7b15bf170f6bdbe72ff1298c2513c1}\label{xist__utils_8h_aba7b15bf170f6bdbe72ff1298c2513c1} 
+\index{xist\_utils.h@{xist\_utils.h}!xist\_convert\_long\_to\_ascii\_array@{xist\_convert\_long\_to\_ascii\_array}}
+\index{xist\_convert\_long\_to\_ascii\_array@{xist\_convert\_long\_to\_ascii\_array}!xist\_utils.h@{xist\_utils.h}}
+\doxysubsubsection{\texorpdfstring{xist\_convert\_long\_to\_ascii\_array()}{xist\_convert\_long\_to\_ascii\_array()}}
+{\footnotesize\ttfamily unsigned char xist\+\_\+convert\+\_\+long\+\_\+to\+\_\+ascii\+\_\+array (\begin{DoxyParamCaption}\item[{signed long}]{num,  }\item[{char \texorpdfstring{$\ast$}{*}}]{result }\end{DoxyParamCaption})}
+
+
+
+Converts provided integer to its string representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em signed} & long num Integer to be converted to a string representation \\
+\hline
+{\em char\texorpdfstring{$\ast$}{*}} & result Pointer to string for the number to be converted. Make sure the string is long enough to contain the maximum possible number of digits, plus a null terminator, plus (if applicable) a minus sign. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned char The length of the resultant string 
+\end{DoxyReturn}
+\Hypertarget{xist__utils_8h_ac86d113141fded8e7726821a0d84948a}\label{xist__utils_8h_ac86d113141fded8e7726821a0d84948a} 
+\index{xist\_utils.h@{xist\_utils.h}!xist\_rand@{xist\_rand}}
+\index{xist\_rand@{xist\_rand}!xist\_utils.h@{xist\_utils.h}}
+\doxysubsubsection{\texorpdfstring{xist\_rand()}{xist\_rand()}}
+{\footnotesize\ttfamily unsigned char xist\+\_\+rand (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Generates a random number between the values indicated by {\ttfamily xist\+\_\+rand\+\_\+min} and {\ttfamily xist\+\_\+rand\+\_\+max} (inclusive) 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__utils_8h_a3ad74b60c07aa4ce85726e256b45d3b3}{xist\+\_\+rand\+\_\+min} 
+
+\doxylink{xist__utils_8h_ad5023a5fad68a98cc5a3a5c6a4ead05f}{xist\+\_\+rand\+\_\+max}
+\end{DoxySeeAlso}
+As a performance optimization, this function uses global variables as virtual parameters. When called, it returns a random number between the values set in {\ttfamily xist\+\_\+rand\+\_\+min} and {\ttfamily xist\+\_\+rand\+\_\+max} (inclusive). The minimum and maximum possible values for this range are 0 and 255, because this pseudorandom number generator is optimized for 8-\/bit numbers. If you need a bigger number, you can just call this function twice and then concatenate the two returned numbers into a single 16-\/bit integer with bit shifting. This function has a period of 65,536 which should be more than sufficient for Commander X16 games. 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{xist__utils_8h_ad5023a5fad68a98cc5a3a5c6a4ead05f}\label{xist__utils_8h_ad5023a5fad68a98cc5a3a5c6a4ead05f} 
+\index{xist\_utils.h@{xist\_utils.h}!xist\_rand\_max@{xist\_rand\_max}}
+\index{xist\_rand\_max@{xist\_rand\_max}!xist\_utils.h@{xist\_utils.h}}
+\doxysubsubsection{\texorpdfstring{xist\_rand\_max}{xist\_rand\_max}}
+{\footnotesize\ttfamily unsigned char xist\+\_\+rand\+\_\+max\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Acts as a virtual parameter for the function {\ttfamily xist\+\_\+rand}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__utils_8h_ac86d113141fded8e7726821a0d84948a}{xist\+\_\+rand}
+\end{DoxySeeAlso}
+The maximum randomized value (inclusive) that you want returned by {\ttfamily xist\+\_\+rand} the next time it is called. \Hypertarget{xist__utils_8h_a3ad74b60c07aa4ce85726e256b45d3b3}\label{xist__utils_8h_a3ad74b60c07aa4ce85726e256b45d3b3} 
+\index{xist\_utils.h@{xist\_utils.h}!xist\_rand\_min@{xist\_rand\_min}}
+\index{xist\_rand\_min@{xist\_rand\_min}!xist\_utils.h@{xist\_utils.h}}
+\doxysubsubsection{\texorpdfstring{xist\_rand\_min}{xist\_rand\_min}}
+{\footnotesize\ttfamily unsigned char xist\+\_\+rand\+\_\+min\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Acts as a virtual parameter for the function {\ttfamily xist\+\_\+rand}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__utils_8h_ac86d113141fded8e7726821a0d84948a}{xist\+\_\+rand}
+\end{DoxySeeAlso}
+The minimum randomized value (inclusive) that you want returned by {\ttfamily xist\+\_\+rand} the next time it is called. \Hypertarget{xist__utils_8h_ad34ea1eb158ad1ea5cc2228c42c61bf8}\label{xist__utils_8h_ad34ea1eb158ad1ea5cc2228c42c61bf8} 
+\index{xist\_utils.h@{xist\_utils.h}!xist\_seed\_a@{xist\_seed\_a}}
+\index{xist\_seed\_a@{xist\_seed\_a}!xist\_utils.h@{xist\_utils.h}}
+\doxysubsubsection{\texorpdfstring{xist\_seed\_a}{xist\_seed\_a}}
+{\footnotesize\ttfamily unsigned char xist\+\_\+seed\+\_\+a\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Current index into one of the two tables that {\ttfamily xist\+\_\+rand} uses to generate pseudorandom numbers. 
+
+Either this variable, or {\ttfamily xist\+\_\+seed\+\_\+b}, or both, should be initialized to a random value at the start of your program in order to generate a different sequence of pseudorandom numbers on every program run.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__utils_8h_ac86d113141fded8e7726821a0d84948a}{xist\+\_\+rand} 
+\end{DoxySeeAlso}
+\Hypertarget{xist__utils_8h_a0738d2e3ba815bfd44afc973c6ba417f}\label{xist__utils_8h_a0738d2e3ba815bfd44afc973c6ba417f} 
+\index{xist\_utils.h@{xist\_utils.h}!xist\_seed\_b@{xist\_seed\_b}}
+\index{xist\_seed\_b@{xist\_seed\_b}!xist\_utils.h@{xist\_utils.h}}
+\doxysubsubsection{\texorpdfstring{xist\_seed\_b}{xist\_seed\_b}}
+{\footnotesize\ttfamily unsigned char xist\+\_\+seed\+\_\+b\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Current index into one of the two tables that {\ttfamily xist\+\_\+rand} uses to generate pseudorandom numbers. 
+
+Either this variable, or {\ttfamily xist\+\_\+seed\+\_\+a}, or both, should be initialized to a random value at the start of your program in order to generate a different sequence of pseudorandom numbers on every program run.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__utils_8h_ac86d113141fded8e7726821a0d84948a}{xist\+\_\+rand} 
+\end{DoxySeeAlso}

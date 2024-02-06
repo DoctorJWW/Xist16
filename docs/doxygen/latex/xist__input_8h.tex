@@ -1,0 +1,200 @@
+\doxysection{inc/xist\+\_\+input.h File Reference}
+\hypertarget{xist__input_8h}{}\label{xist__input_8h}\index{inc/xist\_input.h@{inc/xist\_input.h}}
+
+
+User input functionality.  
+
+
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{xist__input_8h_a3bbb3b1134dcc9e956a7e3b1d164c34f}\label{xist__input_8h_a3bbb3b1134dcc9e956a7e3b1d164c34f} 
+\#define {\bfseries JOYPAD\+\_\+B}~0b1000000000000000U
+\item 
+\Hypertarget{xist__input_8h_a8228ad15ae06c7691fec47688a6c976f}\label{xist__input_8h_a8228ad15ae06c7691fec47688a6c976f} 
+\#define {\bfseries JOYPAD\+\_\+Y}~0b0100000000000000U
+\item 
+\Hypertarget{xist__input_8h_ab27afba1c4d91ee69eaa35b92c0c829e}\label{xist__input_8h_ab27afba1c4d91ee69eaa35b92c0c829e} 
+\#define {\bfseries JOYPAD\+\_\+\+SEL}~0b0010000000000000U
+\item 
+\Hypertarget{xist__input_8h_a8c0f516dbfeee890c522e72ee4ba1051}\label{xist__input_8h_a8c0f516dbfeee890c522e72ee4ba1051} 
+\#define {\bfseries JOYPAD\+\_\+\+STA}~0b0001000000000000U
+\item 
+\Hypertarget{xist__input_8h_a3b4c7bccec3d64639f96066beb2d9247}\label{xist__input_8h_a3b4c7bccec3d64639f96066beb2d9247} 
+\#define {\bfseries JOYPAD\+\_\+U}~0b0000100000000000U
+\item 
+\Hypertarget{xist__input_8h_a0e882537adaf53cfdfcc171261f4664b}\label{xist__input_8h_a0e882537adaf53cfdfcc171261f4664b} 
+\#define {\bfseries JOYPAD\+\_\+D}~0b0000010000000000U
+\item 
+\Hypertarget{xist__input_8h_a296100514b4fc6523fd054657431d53a}\label{xist__input_8h_a296100514b4fc6523fd054657431d53a} 
+\#define {\bfseries JOYPAD\+\_\+L}~0b0000001000000000U
+\item 
+\Hypertarget{xist__input_8h_ad4dcae7d55dd8688b326238ce74b1179}\label{xist__input_8h_ad4dcae7d55dd8688b326238ce74b1179} 
+\#define {\bfseries JOYPAD\+\_\+R}~0b0000000100000000U
+\item 
+\Hypertarget{xist__input_8h_aaf8d8aac4f64ebc3f75adec321cec045}\label{xist__input_8h_aaf8d8aac4f64ebc3f75adec321cec045} 
+\#define {\bfseries JOYPAD\+\_\+A}~0b0000000010000000U
+\item 
+\Hypertarget{xist__input_8h_a15ecc01dcc4c0cf2d42ffef5b3ac6422}\label{xist__input_8h_a15ecc01dcc4c0cf2d42ffef5b3ac6422} 
+\#define {\bfseries JOYPAD\+\_\+X}~0b0000000001000000U
+\item 
+\Hypertarget{xist__input_8h_a86547325ddf5352bd7cbfd3da1508ec9}\label{xist__input_8h_a86547325ddf5352bd7cbfd3da1508ec9} 
+\#define {\bfseries JOYPAD\+\_\+\+LT}~0b0000000000100000U
+\item 
+\Hypertarget{xist__input_8h_a0183b5282e2996165c435a85723c8c50}\label{xist__input_8h_a0183b5282e2996165c435a85723c8c50} 
+\#define {\bfseries JOYPAD\+\_\+\+RT}~0b0000000000010000U
+\item 
+\Hypertarget{xist__input_8h_af2aca56a2a186edd289148f72ed681bd}\label{xist__input_8h_af2aca56a2a186edd289148f72ed681bd} 
+\#define {\bfseries MOUSE\+\_\+L}~0b00000001U
+\item 
+\Hypertarget{xist__input_8h_a4b366c058ecb431071de308e773573b3}\label{xist__input_8h_a4b366c058ecb431071de308e773573b3} 
+\#define {\bfseries MOUSE\+\_\+R}~0b00000010U
+\item 
+\Hypertarget{xist__input_8h_a0160b5b08f75b64f5983338e411e12d0}\label{xist__input_8h_a0160b5b08f75b64f5983338e411e12d0} 
+\#define {\bfseries MOUSE\+\_\+M}~0b00000100U
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned short \mbox{\hyperlink{xist__input_8h_a2d9213eb35dbeccca16d535a6e6aaa41}{xist\+\_\+get\+\_\+joypad}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current state of the joypad. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{xist__input_8h_ac56e694a1ffb0ecd9ae7f6ef0dfc1975}{xist\+\_\+joypad\+\_\+get\+\_\+falling\+\_\+edges}} (unsigned short last\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Returns which joypad buttons are on a falling edge (have just been pressed and then released) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{xist__input_8h_a6e61b05c6bfa801cad8e83a7c8b345bc}{xist\+\_\+update\+\_\+mouse\+\_\+position}} ()
+\begin{DoxyCompactList}\small\item\em Copies the current mouse cursor coordinates into {\ttfamily xist\+\_\+mouse\+\_\+x} and {\ttfamily xist\+\_\+mouse\+\_\+y}. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{xist__input_8h_a9b6673fcda73a01245e0bf4b0291ffcf}{xist\+\_\+get\+\_\+mouse\+\_\+buttons}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current state of the mouse buttons. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{xist__input_8h_a6cc9b04b7300a82ee96cc55d0e94052f}{xist\+\_\+get\+\_\+mouse\+\_\+buttons\+\_\+get\+\_\+falling\+\_\+edges}} (unsigned char last\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Returns which mouse buttons are on a falling edge (have just been pressed and then released) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned short \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{xist__input_8h_a2e25d53306985299b256b2dcebe03f92}{xist\+\_\+mouse\+\_\+x}}
+\begin{DoxyCompactList}\small\item\em Contains the X position of the mouse cursor (in pixels) after calling {\ttfamily xist\+\_\+update\+\_\+mouse\+\_\+position} \end{DoxyCompactList}\item 
+unsigned short \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{xist__input_8h_a1b7e362eaf313c017aa1f7f02ba1828f}{xist\+\_\+mouse\+\_\+y}}
+\begin{DoxyCompactList}\small\item\em Contains the Y position of the mouse cursor (in pixels) after calling {\ttfamily xist\+\_\+update\+\_\+mouse\+\_\+position} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User input functionality. 
+
+Contains macros, extern variables, and function signatures for handling user input from the joypad and mouse. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{xist__input_8h_a2d9213eb35dbeccca16d535a6e6aaa41}\label{xist__input_8h_a2d9213eb35dbeccca16d535a6e6aaa41} 
+\index{xist\_input.h@{xist\_input.h}!xist\_get\_joypad@{xist\_get\_joypad}}
+\index{xist\_get\_joypad@{xist\_get\_joypad}!xist\_input.h@{xist\_input.h}}
+\doxysubsubsection{\texorpdfstring{xist\_get\_joypad()}{xist\_get\_joypad()}}
+{\footnotesize\ttfamily unsigned short xist\+\_\+get\+\_\+joypad (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns the current state of the joypad. 
+
+Returns the current state of the joypad concatenated into a single 16-\/bit integer and inverted so that 1 = button is pressed, 0 = button is not pressed. See the macro defines in this file which you can AND the returned short with to check for button presses.
+
+\begin{DoxyReturn}{Returns}
+unsigned short 
+\end{DoxyReturn}
+\Hypertarget{xist__input_8h_a9b6673fcda73a01245e0bf4b0291ffcf}\label{xist__input_8h_a9b6673fcda73a01245e0bf4b0291ffcf} 
+\index{xist\_input.h@{xist\_input.h}!xist\_get\_mouse\_buttons@{xist\_get\_mouse\_buttons}}
+\index{xist\_get\_mouse\_buttons@{xist\_get\_mouse\_buttons}!xist\_input.h@{xist\_input.h}}
+\doxysubsubsection{\texorpdfstring{xist\_get\_mouse\_buttons()}{xist\_get\_mouse\_buttons()}}
+{\footnotesize\ttfamily unsigned char xist\+\_\+get\+\_\+mouse\+\_\+buttons (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns the current state of the mouse buttons. 
+
+Returns the current state of the mouse buttons, where 1 = button is pressed, 0 = button is not pressed. See the macro defines in this file which you can AND the returned short with to check for button presses.
+
+\begin{DoxyReturn}{Returns}
+unsigned char 
+\end{DoxyReturn}
+\Hypertarget{xist__input_8h_a6cc9b04b7300a82ee96cc55d0e94052f}\label{xist__input_8h_a6cc9b04b7300a82ee96cc55d0e94052f} 
+\index{xist\_input.h@{xist\_input.h}!xist\_get\_mouse\_buttons\_get\_falling\_edges@{xist\_get\_mouse\_buttons\_get\_falling\_edges}}
+\index{xist\_get\_mouse\_buttons\_get\_falling\_edges@{xist\_get\_mouse\_buttons\_get\_falling\_edges}!xist\_input.h@{xist\_input.h}}
+\doxysubsubsection{\texorpdfstring{xist\_get\_mouse\_buttons\_get\_falling\_edges()}{xist\_get\_mouse\_buttons\_get\_falling\_edges()}}
+{\footnotesize\ttfamily unsigned char xist\+\_\+get\+\_\+mouse\+\_\+buttons\+\_\+get\+\_\+falling\+\_\+edges (\begin{DoxyParamCaption}\item[{unsigned char}]{last\+\_\+state }\end{DoxyParamCaption})}
+
+
+
+Returns which mouse buttons are on a falling edge (have just been pressed and then released) 
+
+Returns which mouse buttons that were pressed in the passed-\/in state are now released (i.\+e., are on a falling edge). 1 = button is pressed, 0 = button is not pressed. See the macro defines in this file which you can AND the returned short with to check for falling edges.
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & char last\+\_\+state The state of the mouse buttons during the last game tick. Required to tell which buttons were previously pressed and are now released. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned char 
+\end{DoxyReturn}
+\Hypertarget{xist__input_8h_ac56e694a1ffb0ecd9ae7f6ef0dfc1975}\label{xist__input_8h_ac56e694a1ffb0ecd9ae7f6ef0dfc1975} 
+\index{xist\_input.h@{xist\_input.h}!xist\_joypad\_get\_falling\_edges@{xist\_joypad\_get\_falling\_edges}}
+\index{xist\_joypad\_get\_falling\_edges@{xist\_joypad\_get\_falling\_edges}!xist\_input.h@{xist\_input.h}}
+\doxysubsubsection{\texorpdfstring{xist\_joypad\_get\_falling\_edges()}{xist\_joypad\_get\_falling\_edges()}}
+{\footnotesize\ttfamily unsigned short xist\+\_\+joypad\+\_\+get\+\_\+falling\+\_\+edges (\begin{DoxyParamCaption}\item[{unsigned short}]{last\+\_\+state }\end{DoxyParamCaption})}
+
+
+
+Returns which joypad buttons are on a falling edge (have just been pressed and then released) 
+
+Returns which joypad buttons that were pressed in the passed-\/in state are now released (i.\+e., are on a falling edge). 1 = button is pressed, 0 = button is not pressed. See the macro defines in this file which you can AND the returned short with to check for falling edges.
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & short last\+\_\+state The state of the joypad during the last game tick. Required to tell which buttons were previously pressed and are now released. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned short 
+\end{DoxyReturn}
+\Hypertarget{xist__input_8h_a6e61b05c6bfa801cad8e83a7c8b345bc}\label{xist__input_8h_a6e61b05c6bfa801cad8e83a7c8b345bc} 
+\index{xist\_input.h@{xist\_input.h}!xist\_update\_mouse\_position@{xist\_update\_mouse\_position}}
+\index{xist\_update\_mouse\_position@{xist\_update\_mouse\_position}!xist\_input.h@{xist\_input.h}}
+\doxysubsubsection{\texorpdfstring{xist\_update\_mouse\_position()}{xist\_update\_mouse\_position()}}
+{\footnotesize\ttfamily void xist\+\_\+update\+\_\+mouse\+\_\+position (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Copies the current mouse cursor coordinates into {\ttfamily xist\+\_\+mouse\+\_\+x} and {\ttfamily xist\+\_\+mouse\+\_\+y}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__input_8h_a2e25d53306985299b256b2dcebe03f92}{xist\+\_\+mouse\+\_\+x} 
+
+\doxylink{xist__input_8h_a1b7e362eaf313c017aa1f7f02ba1828f}{xist\+\_\+mouse\+\_\+y} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{xist__input_8h_a2e25d53306985299b256b2dcebe03f92}\label{xist__input_8h_a2e25d53306985299b256b2dcebe03f92} 
+\index{xist\_input.h@{xist\_input.h}!xist\_mouse\_x@{xist\_mouse\_x}}
+\index{xist\_mouse\_x@{xist\_mouse\_x}!xist\_input.h@{xist\_input.h}}
+\doxysubsubsection{\texorpdfstring{xist\_mouse\_x}{xist\_mouse\_x}}
+{\footnotesize\ttfamily unsigned short\texorpdfstring{$\ast$}{*} xist\+\_\+mouse\+\_\+x\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Contains the X position of the mouse cursor (in pixels) after calling {\ttfamily xist\+\_\+update\+\_\+mouse\+\_\+position} 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__input_8h_a6e61b05c6bfa801cad8e83a7c8b345bc}{xist\+\_\+update\+\_\+mouse\+\_\+position} 
+\end{DoxySeeAlso}
+\Hypertarget{xist__input_8h_a1b7e362eaf313c017aa1f7f02ba1828f}\label{xist__input_8h_a1b7e362eaf313c017aa1f7f02ba1828f} 
+\index{xist\_input.h@{xist\_input.h}!xist\_mouse\_y@{xist\_mouse\_y}}
+\index{xist\_mouse\_y@{xist\_mouse\_y}!xist\_input.h@{xist\_input.h}}
+\doxysubsubsection{\texorpdfstring{xist\_mouse\_y}{xist\_mouse\_y}}
+{\footnotesize\ttfamily unsigned short\texorpdfstring{$\ast$}{*} xist\+\_\+mouse\+\_\+y\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Contains the Y position of the mouse cursor (in pixels) after calling {\ttfamily xist\+\_\+update\+\_\+mouse\+\_\+position} 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__input_8h_a6e61b05c6bfa801cad8e83a7c8b345bc}{xist\+\_\+update\+\_\+mouse\+\_\+position} 
+\end{DoxySeeAlso}

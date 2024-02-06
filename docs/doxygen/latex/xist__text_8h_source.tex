@@ -1,0 +1,58 @@
+\doxysection{xist\+\_\+text.\+h}
+\hypertarget{xist__text_8h_source}{}\label{xist__text_8h_source}\index{inc/xist\_text.h@{inc/xist\_text.h}}
+\mbox{\hyperlink{xist__text_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ XIST\_TEXT\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ XIST\_TEXT\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ XIST\_TYPEWRITER\_TEXT\_ROWS\ 10}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ XIST\_TYPEWRITER\_TEXT\_COLUMNS\ 36}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ XIST\_TEXT\_COLOR\_WHITE\ \ \ \ \ 0b00000000}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ XIST\_TEXT\_COLOR\_BLACK\ \ \ \ \ 0b00010000}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ XIST\_TEXT\_COLOR\_BURGUNDY\ \ 0b00100000}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ XIST\_TEXT\_COLOR\_RED\ \ \ \ \ \ \ 0b00110000}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ XIST\_TEXT\_COLOR\_YELLOW\ \ \ \ 0b01000000}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ XIST\_TEXT\_COLOR\_UMBER\ \ \ \ \ 0b01010000}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ XIST\_TEXT\_COLOR\_PINE\ \ \ \ \ \ 0b01100000}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ XIST\_TEXT\_COLOR\_GREEN\ \ \ \ \ 0b01110000}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ XIST\_TEXT\_COLOR\_MINT\ \ \ \ \ \ 0b10000000}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ XIST\_TEXT\_COLOR\_SLATE\ \ \ \ \ 0b10010000}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ XIST\_TEXT\_COLOR\_CYAN\ \ \ \ \ \ 0b10100000}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ XIST\_TEXT\_COLOR\_GRAY\ \ \ \ \ \ 0b10110000}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ XIST\_TEXT\_COLOR\_MIDNIGHT\ \ 0b11000000}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ XIST\_TEXT\_COLOR\_INDIGO\ \ \ \ 0b11010000}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ XIST\_TEXT\_COLOR\_PURPLE\ \ \ \ 0b11100000}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ XIST\_TEXT\_COLOR\_PINK\ \ \ \ \ \ 0b11110000}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{xist__text_8h_abbd4b6b7da82572e150491d120c54ef9}{xist\_typewriter\_text}}[XIST\_TYPEWRITER\_TEXT\_ROWS][XIST\_TYPEWRITER\_TEXT\_COLUMNS];}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00060\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{xist__text_8h_a5ec60b34a36244a820b0dc8e174814e9}{xist\_text}};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{xist__text_8h_aa152d3fa513b33b304465f092fc34ebb}{xist\_text\_tile\_x}};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00078\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{xist__text_8h_aa7d234e43a229ac56f777ba9bd74ecf2}{xist\_text\_tile\_y}};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00087\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{xist__text_8h_ae58185a9a9ae9635274a822e8d080abc}{xist\_tw\_text\_tile\_x}};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00096\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{xist__text_8h_af4cf6673098ef04a2824dc52b0c7af83}{xist\_tw\_text\_tile\_y}};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00106\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{xist__text_8h_a5955bdf6675f29558daf8f8039115e11}{xist\_palette\_offset}};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00112\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{xist__text_8h_aad24022acaf449c720d5292d9f03abaf}{xist\_clear\_text}}();}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00123\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{xist__text_8h_a7f70be91b3f01483155b20cb0e1e8176}{xist\_initialize\_text\_tiles}}();}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00147\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{xist__text_8h_ae3f468d1a6bac47d1cf5f3ed2be34032}{xist\_draw\_text}}();}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00153\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{xist__text_8h_a55e874850dd9cf78e587eac0f2c68fda}{xist\_reset\_typewriter\_counters}}();}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00184\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{xist__text_8h_a8e95bb68f12ab5151dbad2212eb06c6a}{xist\_draw\_typewriter\_text}}();}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00202\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{xist__text_8h_ae393abe378631edcbcdda55a6f53af49}{xist\_replace\_substring}}(\textcolor{keywordtype}{char}\ *str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *placeholder,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *replacement);}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,315 @@
+\doxysection{inc/xist\+\_\+tiles.h File Reference}
+\hypertarget{xist__tiles_8h}{}\label{xist__tiles_8h}\index{inc/xist\_tiles.h@{inc/xist\_tiles.h}}
+
+
+Functionality for rendering tilemaps on layer 0.  
+
+
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{xist__tiles_8h_a00598a8afab61135825d0bc5b4876da5}\label{xist__tiles_8h_a00598a8afab61135825d0bc5b4876da5} 
+\#define {\bfseries XIST\+\_\+\+TILE\+\_\+\+PALETTE\+\_\+\+OFFSET\+\_\+1}~0b00010000
+\item 
+\Hypertarget{xist__tiles_8h_a5df734e07e05ec0745d2c8fb5b699eee}\label{xist__tiles_8h_a5df734e07e05ec0745d2c8fb5b699eee} 
+\#define {\bfseries XIST\+\_\+\+TILE\+\_\+\+PALETTE\+\_\+\+OFFSET\+\_\+2}~0b00100000
+\item 
+\Hypertarget{xist__tiles_8h_a3a9e16dcc5db0fd033a76756c254f6f5}\label{xist__tiles_8h_a3a9e16dcc5db0fd033a76756c254f6f5} 
+\#define {\bfseries XIST\+\_\+\+TILE\+\_\+\+PALETTE\+\_\+\+OFFSET\+\_\+3}~0b01000000
+\item 
+\Hypertarget{xist__tiles_8h_a48a8ce0295073f902cdd647c8c853d4b}\label{xist__tiles_8h_a48a8ce0295073f902cdd647c8c853d4b} 
+\#define {\bfseries XIST\+\_\+\+TILE\+\_\+\+PALETTE\+\_\+\+OFFSET\+\_\+4}~0b10000000
+\item 
+\Hypertarget{xist__tiles_8h_a3c472a3fb9e86fb3d468cb9697167968}\label{xist__tiles_8h_a3c472a3fb9e86fb3d468cb9697167968} 
+\#define {\bfseries LAYER\+\_\+0\+\_\+\+MAPBASE\+\_\+\+WIDTH}~64
+\begin{DoxyCompactList}\small\item\em The width in tiles of tile layer 0 for your game. Valid values are 32, 62, 128, 256. \end{DoxyCompactList}\item 
+\Hypertarget{xist__tiles_8h_af25e164b280c42cc4709a148e0f5189a}\label{xist__tiles_8h_af25e164b280c42cc4709a148e0f5189a} 
+\#define {\bfseries LAYER\+\_\+0\+\_\+\+MAPBASE\+\_\+\+HEIGHT}~64
+\begin{DoxyCompactList}\small\item\em The height in tiles of tile layer 0 for your game. Valid values are 32, 62, 128, 256. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{xist__tiles_8h_aa95b3f3b90fb808e64cdae72dceeddc7}{LAYER\+\_\+0\+\_\+\+MAPBASE\+\_\+\+TOTAL}}~4096
+\begin{DoxyCompactList}\small\item\em The total number of tiles in your layer 0 (equal to width \texorpdfstring{$\ast$}{*} height). \end{DoxyCompactList}\item 
+\Hypertarget{xist__tiles_8h_a7e026b46af309946aaa26f19189e1ef3}\label{xist__tiles_8h_a7e026b46af309946aaa26f19189e1ef3} 
+\#define {\bfseries LAYER\+\_\+0\+\_\+\+TILE\+\_\+\+DIMENSIONS}~16
+\begin{DoxyCompactList}\small\item\em The width/height of your individual tiles, in pixels. Valid values are 8 or 16. In Xist16, your tiles must be the same width and height. \end{DoxyCompactList}\item 
+\Hypertarget{xist__tiles_8h_ada673f3782fe0d7183a5969407658c40}\label{xist__tiles_8h_ada673f3782fe0d7183a5969407658c40} 
+\#define {\bfseries LAYER\+\_\+1\+\_\+\+MAPBASE\+\_\+\+WIDTH}~64
+\item 
+\Hypertarget{xist__tiles_8h_aaf690c5686ea86bc5396f7aa5a7e1144}\label{xist__tiles_8h_aaf690c5686ea86bc5396f7aa5a7e1144} 
+\#define {\bfseries LAYER\+\_\+1\+\_\+\+MAPBASE\+\_\+\+HEIGHT}~32
+\item 
+\Hypertarget{xist__tiles_8h_aee60044184048215ea24c5af39fca9b6}\label{xist__tiles_8h_aee60044184048215ea24c5af39fca9b6} 
+\#define {\bfseries LAYER\+\_\+1\+\_\+\+MAPBASE\+\_\+\+TOTAL}~2048
+\item 
+\Hypertarget{xist__tiles_8h_a207189dbb350a4a664591b5871e0b219}\label{xist__tiles_8h_a207189dbb350a4a664591b5871e0b219} 
+\#define {\bfseries LAYER\+\_\+1\+\_\+\+WIDTH\+\_\+\+BITMASK}~0b00010000
+\item 
+\Hypertarget{xist__tiles_8h_a3c6be0ae2154352f1831ea752bea6b2a}\label{xist__tiles_8h_a3c6be0ae2154352f1831ea752bea6b2a} 
+\#define {\bfseries LAYER\+\_\+1\+\_\+\+HEIGHT\+\_\+\+BITMASK}~0b00000000
+\item 
+\Hypertarget{xist__tiles_8h_a76ab81311b1abdd153292f919dae2659}\label{xist__tiles_8h_a76ab81311b1abdd153292f919dae2659} 
+\#define {\bfseries LAYER\+\_\+1\+\_\+\+SCREEN\+\_\+\+TILE\+\_\+\+WIDTH}~40
+\item 
+\Hypertarget{xist__tiles_8h_a34cec34c0eef154457eba328dd66e84f}\label{xist__tiles_8h_a34cec34c0eef154457eba328dd66e84f} 
+\#define {\bfseries LAYER\+\_\+1\+\_\+\+SCREEN\+\_\+\+TILE\+\_\+\+HEIGHT}~30
+\item 
+\Hypertarget{xist__tiles_8h_a595726694a8270ba0fb7af9f82950064}\label{xist__tiles_8h_a595726694a8270ba0fb7af9f82950064} 
+\#define {\bfseries LAYER\+\_\+1\+\_\+\+TILE\+\_\+\+DIMENSIONS}~8
+\item 
+\Hypertarget{xist__tiles_8h_a6e631030203b36bd19456093163af81f}\label{xist__tiles_8h_a6e631030203b36bd19456093163af81f} 
+\#define {\bfseries LAYER\+\_\+1\+\_\+\+BYTE4\+\_\+\+BITMASK}~0b00000000
+\item 
+\#define \mbox{\hyperlink{xist__tiles_8h_a9eebad67a3d155b16121bac092d9c63a}{XIST\+\_\+\+MAX\+\_\+\+MAP\+\_\+\+TILE\+\_\+\+GRAPHICS}}~64
+\begin{DoxyCompactList}\small\item\em The maximum number of concurrent tile graphics in VRAM. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{xist__tiles_8h_aee326c92d69f2f2332f8ab473ca6e445}{xist\+\_\+initialize\+\_\+tiles}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the tile layers for use with Xist16\textquotesingle{}s functions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{xist__tiles_8h_a0c3dd1f728ce5f5b929278b7c6e5dd2b}{xist\+\_\+scroll\+\_\+camera}} ()
+\begin{DoxyCompactList}\small\item\em Scrolls tile layer 0 and optionally stops scrolling at the layer\textquotesingle{}s edge. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{xist__tiles_8h_a03ce66d667fd7f99146710f0bb8911d0}{xist\+\_\+animate\+\_\+map\+\_\+tiles}} ()
+\begin{DoxyCompactList}\small\item\em Animates visible tiles on layer 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \mbox{\hyperlink{xist__tiles_8h_a078bf96c095240cfff965c82e1b0a79f}{xist\+\_\+map\+\_\+tiles}} \mbox{[}\mbox{\hyperlink{xist__tiles_8h_aa95b3f3b90fb808e64cdae72dceeddc7}{LAYER\+\_\+0\+\_\+\+MAPBASE\+\_\+\+TOTAL}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array containing the indices of tile graphics for each tile on layer 0. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{xist__tiles_8h_a25eeca358a205029474a4f1389a33481}{xist\+\_\+tile\+\_\+animations}} \mbox{[}\mbox{\hyperlink{xist__tiles_8h_a9eebad67a3d155b16121bac092d9c63a}{XIST\+\_\+\+MAX\+\_\+\+MAP\+\_\+\+TILE\+\_\+\+GRAPHICS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Lookup table that defines the animation sequences for tile graphics. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{xist__tiles_8h_a454f52c2a17be04177051cfbdd8e5bec}{xist\+\_\+tile\+\_\+animation\+\_\+time\+\_\+trigger}}
+\begin{DoxyCompactList}\small\item\em The number of game ticks that each frame of animation for animation tiles should display. \end{DoxyCompactList}\item 
+BOOL \mbox{\hyperlink{xist__tiles_8h_a7a6e08a33629380eac3b3d7f2fd25b8c}{xist\+\_\+allow\+\_\+tile\+\_\+scroll\+\_\+wrap}}
+\begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the function {\ttfamily xist\+\_\+scroll\+\_\+camera}. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{xist__tiles_8h_abc443a51b9b0436a1023e25afc581796}{xist\+\_\+tilemap\+\_\+width\+\_\+pix}}
+\begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the function {\ttfamily xist\+\_\+scroll\+\_\+camera}. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{xist__tiles_8h_a66ef78f20eaa489135626897073aab3d}{xist\+\_\+tilemap\+\_\+height\+\_\+pix}}
+\begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the function {\ttfamily xist\+\_\+scroll\+\_\+camera}. \end{DoxyCompactList}\item 
+signed short \mbox{\hyperlink{xist__tiles_8h_ae882773113ec63feed76794b02ed4c70}{xist\+\_\+camera\+\_\+x}}
+\begin{DoxyCompactList}\small\item\em The left side of the current viewport, in pixels. \end{DoxyCompactList}\item 
+signed short \mbox{\hyperlink{xist__tiles_8h_a9abb1ae95753209506a8fbaef553385c}{xist\+\_\+camera\+\_\+y}}
+\begin{DoxyCompactList}\small\item\em The top of the current viewport, in pixels. \end{DoxyCompactList}\item 
+signed char \mbox{\hyperlink{xist__tiles_8h_afee57b58fbfbe2b1e810525f06000c19}{xist\+\_\+camera\+\_\+change\+\_\+x}}
+\begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the function {\ttfamily xist\+\_\+scroll\+\_\+camera}. \end{DoxyCompactList}\item 
+signed char \mbox{\hyperlink{xist__tiles_8h_a3b3a96ece43571dea71de82094ff9acd}{xist\+\_\+camera\+\_\+change\+\_\+y}}
+\begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the function {\ttfamily xist\+\_\+scroll\+\_\+camera}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functionality for rendering tilemaps on layer 0. 
+
+Contains macros, global variables, and function signatures to control tile dimensions and manipulate the tiles on layer 0. 
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{xist__tiles_8h_aa95b3f3b90fb808e64cdae72dceeddc7}\label{xist__tiles_8h_aa95b3f3b90fb808e64cdae72dceeddc7} 
+\index{xist\_tiles.h@{xist\_tiles.h}!LAYER\_0\_MAPBASE\_TOTAL@{LAYER\_0\_MAPBASE\_TOTAL}}
+\index{LAYER\_0\_MAPBASE\_TOTAL@{LAYER\_0\_MAPBASE\_TOTAL}!xist\_tiles.h@{xist\_tiles.h}}
+\doxysubsubsection{\texorpdfstring{LAYER\_0\_MAPBASE\_TOTAL}{LAYER\_0\_MAPBASE\_TOTAL}}
+{\footnotesize\ttfamily \#define LAYER\+\_\+0\+\_\+\+MAPBASE\+\_\+\+TOTAL~4096}
+
+
+
+The total number of tiles in your layer 0 (equal to width \texorpdfstring{$\ast$}{*} height). 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__tiles_8h_a078bf96c095240cfff965c82e1b0a79f}{xist\+\_\+map\+\_\+tiles} Set this to be equal to \doxylink{xist__tiles_8h_a3c472a3fb9e86fb3d468cb9697167968}{LAYER\+\_\+0\+\_\+\+MAPBASE\+\_\+\+WIDTH} \texorpdfstring{$\ast$}{*} \doxylink{xist__tiles_8h_af25e164b280c42cc4709a148e0f5189a}{LAYER\+\_\+0\+\_\+\+MAPBASE\+\_\+\+HEIGHT}. The reason this is a macro instead of being auto-\/calculated by {\ttfamily \doxylink{xist__tiles_8h_aee326c92d69f2f2332f8ab473ca6e445}{xist\+\_\+initialize\+\_\+tiles}} is because it\textquotesingle{}s used to define the size of the {\ttfamily \doxylink{xist__tiles_8h_a078bf96c095240cfff965c82e1b0a79f}{xist\+\_\+map\+\_\+tiles}} array. 
+\end{DoxySeeAlso}
+\Hypertarget{xist__tiles_8h_a9eebad67a3d155b16121bac092d9c63a}\label{xist__tiles_8h_a9eebad67a3d155b16121bac092d9c63a} 
+\index{xist\_tiles.h@{xist\_tiles.h}!XIST\_MAX\_MAP\_TILE\_GRAPHICS@{XIST\_MAX\_MAP\_TILE\_GRAPHICS}}
+\index{XIST\_MAX\_MAP\_TILE\_GRAPHICS@{XIST\_MAX\_MAP\_TILE\_GRAPHICS}!xist\_tiles.h@{xist\_tiles.h}}
+\doxysubsubsection{\texorpdfstring{XIST\_MAX\_MAP\_TILE\_GRAPHICS}{XIST\_MAX\_MAP\_TILE\_GRAPHICS}}
+{\footnotesize\ttfamily \#define XIST\+\_\+\+MAX\+\_\+\+MAP\+\_\+\+TILE\+\_\+\+GRAPHICS~64}
+
+
+
+The maximum number of concurrent tile graphics in VRAM. 
+
+Set this to the maximum number of concurrent tile graphics in VRAM you wish for your game to support. The highest value that works with Xist16\textquotesingle{}s functionality is 256 (even though the Commander X16 can technically support more). Make sure the amount of space you allocate to your XIST\+\_\+\+LAYER\+\_\+0\+\_\+\+TILE\+\_\+\+BASE defined in {\ttfamily \doxylink{xist__mem_8h}{xist\+\_\+mem.\+h}} comports with the value defined here. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{xist__tiles_8h_a03ce66d667fd7f99146710f0bb8911d0}\label{xist__tiles_8h_a03ce66d667fd7f99146710f0bb8911d0} 
+\index{xist\_tiles.h@{xist\_tiles.h}!xist\_animate\_map\_tiles@{xist\_animate\_map\_tiles}}
+\index{xist\_animate\_map\_tiles@{xist\_animate\_map\_tiles}!xist\_tiles.h@{xist\_tiles.h}}
+\doxysubsubsection{\texorpdfstring{xist\_animate\_map\_tiles()}{xist\_animate\_map\_tiles()}}
+{\footnotesize\ttfamily void xist\+\_\+animate\+\_\+map\+\_\+tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Animates visible tiles on layer 0. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__tiles_8h_a078bf96c095240cfff965c82e1b0a79f}{xist\+\_\+map\+\_\+tiles} 
+
+\doxylink{xist__tiles_8h_a454f52c2a17be04177051cfbdd8e5bec}{xist\+\_\+tile\+\_\+animation\+\_\+time\+\_\+trigger}
+\end{DoxySeeAlso}
+Animates all tiles on layer 0 that have animations defined in the {\ttfamily xist\+\_\+map\+\_\+tiles} lookup table. As a performance opmization, all tiles animate on the same timer. Define the number of game ticks that each frame of animation lasts for using the {\ttfamily xist\+\_\+tile\+\_\+animation\+\_\+time\+\_\+trigger} global variable. IMPORTANT NOTE\+: This function assumes that wrapping tile layer 0 is disallowed. If this is not the case, its behavior is undefined. \Hypertarget{xist__tiles_8h_aee326c92d69f2f2332f8ab473ca6e445}\label{xist__tiles_8h_aee326c92d69f2f2332f8ab473ca6e445} 
+\index{xist\_tiles.h@{xist\_tiles.h}!xist\_initialize\_tiles@{xist\_initialize\_tiles}}
+\index{xist\_initialize\_tiles@{xist\_initialize\_tiles}!xist\_tiles.h@{xist\_tiles.h}}
+\doxysubsubsection{\texorpdfstring{xist\_initialize\_tiles()}{xist\_initialize\_tiles()}}
+{\footnotesize\ttfamily void xist\+\_\+initialize\+\_\+tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the tile layers for use with Xist16\textquotesingle{}s functions. 
+
+Uses the macro definitions in this file to automatically configure the tile layers, setting VERA values and precomputing addresses as appropriate. You should call this during your program initialization, before any other Xist16 functions. \Hypertarget{xist__tiles_8h_a0c3dd1f728ce5f5b929278b7c6e5dd2b}\label{xist__tiles_8h_a0c3dd1f728ce5f5b929278b7c6e5dd2b} 
+\index{xist\_tiles.h@{xist\_tiles.h}!xist\_scroll\_camera@{xist\_scroll\_camera}}
+\index{xist\_scroll\_camera@{xist\_scroll\_camera}!xist\_tiles.h@{xist\_tiles.h}}
+\doxysubsubsection{\texorpdfstring{xist\_scroll\_camera()}{xist\_scroll\_camera()}}
+{\footnotesize\ttfamily void xist\+\_\+scroll\+\_\+camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Scrolls tile layer 0 and optionally stops scrolling at the layer\textquotesingle{}s edge. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__tiles_8h_afee57b58fbfbe2b1e810525f06000c19}{xist\+\_\+camera\+\_\+change\+\_\+x} 
+
+\doxylink{xist__tiles_8h_a3b3a96ece43571dea71de82094ff9acd}{xist\+\_\+camera\+\_\+change\+\_\+y} 
+
+\doxylink{xist__tiles_8h_abc443a51b9b0436a1023e25afc581796}{xist\+\_\+tilemap\+\_\+width\+\_\+pix} 
+
+\doxylink{xist__tiles_8h_a66ef78f20eaa489135626897073aab3d}{xist\+\_\+tilemap\+\_\+height\+\_\+pix} 
+
+\doxylink{xist__tiles_8h_a7a6e08a33629380eac3b3d7f2fd25b8c}{xist\+\_\+allow\+\_\+tile\+\_\+scroll\+\_\+wrap}
+\end{DoxySeeAlso}
+As a performance optimization, this function uses global variables as virtual parameters. When called, it scrolls tile layer 0 by an amount specified in {\ttfamily xist\+\_\+camera\+\_\+change\+\_\+x} and {\ttfamily xist\+\_\+camera\+\_\+change\+\_\+y}. If {\ttfamily xist\+\_\+allow\+\_\+tile\+\_\+scroll\+\_\+wrap} is set to FALSE, scrolling stops when you hit the edge of the tile layer; i.\+e., your viewport is constrained to the boundaries of tile layer 0. These boundaries are defined as \mbox{[}0, 0\mbox{]} -\/ \mbox{[}xist\+\_\+tilemap\+\_\+width\+\_\+pix, xist\+\_\+tilemap\+\_\+height\+\_\+pix\mbox{]}. 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{xist__tiles_8h_a7a6e08a33629380eac3b3d7f2fd25b8c}\label{xist__tiles_8h_a7a6e08a33629380eac3b3d7f2fd25b8c} 
+\index{xist\_tiles.h@{xist\_tiles.h}!xist\_allow\_tile\_scroll\_wrap@{xist\_allow\_tile\_scroll\_wrap}}
+\index{xist\_allow\_tile\_scroll\_wrap@{xist\_allow\_tile\_scroll\_wrap}!xist\_tiles.h@{xist\_tiles.h}}
+\doxysubsubsection{\texorpdfstring{xist\_allow\_tile\_scroll\_wrap}{xist\_allow\_tile\_scroll\_wrap}}
+{\footnotesize\ttfamily BOOL xist\+\_\+allow\+\_\+tile\+\_\+scroll\+\_\+wrap\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Acts as a virtual parameter for the function {\ttfamily xist\+\_\+scroll\+\_\+camera}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__tiles_8h_a0c3dd1f728ce5f5b929278b7c6e5dd2b}{xist\+\_\+scroll\+\_\+camera}
+\end{DoxySeeAlso}
+Determines whether tile layer 0 is allowed to wrap; i.\+e., whether the viewport/camera is allowed to scroll past the edges of the tile map (defined as \mbox{[}0, 0\mbox{]} -\/ \mbox{[}xist\+\_\+tilemap\+\_\+width\+\_\+pix, xist\+\_\+tilemap\+\_\+height\+\_\+pix\mbox{]}) or whether it is constrained to those boundaries. Set it to FALSE to constrain the camera and TRUE to permit wrapping. \Hypertarget{xist__tiles_8h_afee57b58fbfbe2b1e810525f06000c19}\label{xist__tiles_8h_afee57b58fbfbe2b1e810525f06000c19} 
+\index{xist\_tiles.h@{xist\_tiles.h}!xist\_camera\_change\_x@{xist\_camera\_change\_x}}
+\index{xist\_camera\_change\_x@{xist\_camera\_change\_x}!xist\_tiles.h@{xist\_tiles.h}}
+\doxysubsubsection{\texorpdfstring{xist\_camera\_change\_x}{xist\_camera\_change\_x}}
+{\footnotesize\ttfamily signed char xist\+\_\+camera\+\_\+change\+\_\+x\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Acts as a virtual parameter for the function {\ttfamily xist\+\_\+scroll\+\_\+camera}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__tiles_8h_a0c3dd1f728ce5f5b929278b7c6e5dd2b}{xist\+\_\+scroll\+\_\+camera}
+\end{DoxySeeAlso}
+Sets the amount by which to scroll the viewport horizontally when {\ttfamily xist\+\_\+scroll\+\_\+camera} is called. A negative value scrolls the \textquotesingle{}camera\textquotesingle{} to the left; a positive value scrolls it to the right. \Hypertarget{xist__tiles_8h_a3b3a96ece43571dea71de82094ff9acd}\label{xist__tiles_8h_a3b3a96ece43571dea71de82094ff9acd} 
+\index{xist\_tiles.h@{xist\_tiles.h}!xist\_camera\_change\_y@{xist\_camera\_change\_y}}
+\index{xist\_camera\_change\_y@{xist\_camera\_change\_y}!xist\_tiles.h@{xist\_tiles.h}}
+\doxysubsubsection{\texorpdfstring{xist\_camera\_change\_y}{xist\_camera\_change\_y}}
+{\footnotesize\ttfamily signed char xist\+\_\+camera\+\_\+change\+\_\+y\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Acts as a virtual parameter for the function {\ttfamily xist\+\_\+scroll\+\_\+camera}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__tiles_8h_a0c3dd1f728ce5f5b929278b7c6e5dd2b}{xist\+\_\+scroll\+\_\+camera}
+\end{DoxySeeAlso}
+Sets the amount by which to scroll the viewport vertically when {\ttfamily xist\+\_\+scroll\+\_\+camera} is called. A negative value scrolls the \textquotesingle{}camera\textquotesingle{} up; a positive value scrolls it down. \Hypertarget{xist__tiles_8h_ae882773113ec63feed76794b02ed4c70}\label{xist__tiles_8h_ae882773113ec63feed76794b02ed4c70} 
+\index{xist\_tiles.h@{xist\_tiles.h}!xist\_camera\_x@{xist\_camera\_x}}
+\index{xist\_camera\_x@{xist\_camera\_x}!xist\_tiles.h@{xist\_tiles.h}}
+\doxysubsubsection{\texorpdfstring{xist\_camera\_x}{xist\_camera\_x}}
+{\footnotesize\ttfamily signed short xist\+\_\+camera\+\_\+x\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+The left side of the current viewport, in pixels. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__tiles_8h_a0c3dd1f728ce5f5b929278b7c6e5dd2b}{xist\+\_\+scroll\+\_\+camera} 
+\end{DoxySeeAlso}
+\Hypertarget{xist__tiles_8h_a9abb1ae95753209506a8fbaef553385c}\label{xist__tiles_8h_a9abb1ae95753209506a8fbaef553385c} 
+\index{xist\_tiles.h@{xist\_tiles.h}!xist\_camera\_y@{xist\_camera\_y}}
+\index{xist\_camera\_y@{xist\_camera\_y}!xist\_tiles.h@{xist\_tiles.h}}
+\doxysubsubsection{\texorpdfstring{xist\_camera\_y}{xist\_camera\_y}}
+{\footnotesize\ttfamily signed short xist\+\_\+camera\+\_\+y\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+The top of the current viewport, in pixels. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__tiles_8h_a0c3dd1f728ce5f5b929278b7c6e5dd2b}{xist\+\_\+scroll\+\_\+camera} 
+\end{DoxySeeAlso}
+\Hypertarget{xist__tiles_8h_a078bf96c095240cfff965c82e1b0a79f}\label{xist__tiles_8h_a078bf96c095240cfff965c82e1b0a79f} 
+\index{xist\_tiles.h@{xist\_tiles.h}!xist\_map\_tiles@{xist\_map\_tiles}}
+\index{xist\_map\_tiles@{xist\_map\_tiles}!xist\_tiles.h@{xist\_tiles.h}}
+\doxysubsubsection{\texorpdfstring{xist\_map\_tiles}{xist\_map\_tiles}}
+{\footnotesize\ttfamily unsigned char xist\+\_\+map\+\_\+tiles\mbox{[}\mbox{\hyperlink{xist__tiles_8h_aa95b3f3b90fb808e64cdae72dceeddc7}{LAYER\+\_\+0\+\_\+\+MAPBASE\+\_\+\+TOTAL}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Array containing the indices of tile graphics for each tile on layer 0. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__tiles_8h_a03ce66d667fd7f99146710f0bb8911d0}{xist\+\_\+animate\+\_\+map\+\_\+tiles}
+\end{DoxySeeAlso}
+This array contains the indices of each of the tile graphics used by every tile in VRAM for the current tilemap. I have read that multidimensional arrays are slow when compiled by cc65, so as a performance optimization, this is a one-\/dimensional array. It would map to an equivalent two-\/dimensional array if that array were read from left-\/to-\/right and top-\/to-\/bottom (i.\+e., one row at a time). \Hypertarget{xist__tiles_8h_a454f52c2a17be04177051cfbdd8e5bec}\label{xist__tiles_8h_a454f52c2a17be04177051cfbdd8e5bec} 
+\index{xist\_tiles.h@{xist\_tiles.h}!xist\_tile\_animation\_time\_trigger@{xist\_tile\_animation\_time\_trigger}}
+\index{xist\_tile\_animation\_time\_trigger@{xist\_tile\_animation\_time\_trigger}!xist\_tiles.h@{xist\_tiles.h}}
+\doxysubsubsection{\texorpdfstring{xist\_tile\_animation\_time\_trigger}{xist\_tile\_animation\_time\_trigger}}
+{\footnotesize\ttfamily unsigned char xist\+\_\+tile\+\_\+animation\+\_\+time\+\_\+trigger\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+The number of game ticks that each frame of animation for animation tiles should display. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__tiles_8h_a03ce66d667fd7f99146710f0bb8911d0}{xist\+\_\+animate\+\_\+map\+\_\+tiles}
+\end{DoxySeeAlso}
+Sets the amount of time (in game ticks, or more specifically invocations of the {\ttfamily xist\+\_\+animate\+\_\+map\+\_\+tiles} function) that each frame of animation in animated tiles should be displayed before moving on to the next frame. As a performance optimization, all tiles animate on the same timer. \Hypertarget{xist__tiles_8h_a25eeca358a205029474a4f1389a33481}\label{xist__tiles_8h_a25eeca358a205029474a4f1389a33481} 
+\index{xist\_tiles.h@{xist\_tiles.h}!xist\_tile\_animations@{xist\_tile\_animations}}
+\index{xist\_tile\_animations@{xist\_tile\_animations}!xist\_tiles.h@{xist\_tiles.h}}
+\doxysubsubsection{\texorpdfstring{xist\_tile\_animations}{xist\_tile\_animations}}
+{\footnotesize\ttfamily unsigned char xist\+\_\+tile\+\_\+animations\mbox{[}\mbox{\hyperlink{xist__tiles_8h_a9eebad67a3d155b16121bac092d9c63a}{XIST\+\_\+\+MAX\+\_\+\+MAP\+\_\+\+TILE\+\_\+\+GRAPHICS}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Lookup table that defines the animation sequences for tile graphics. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__tiles_8h_a03ce66d667fd7f99146710f0bb8911d0}{xist\+\_\+animate\+\_\+map\+\_\+tiles}
+\end{DoxySeeAlso}
+Tile animations are defined by having this array be equal to the maximum number of concurrent tile graphics supported by your game, where each index in this table is equal to the index of that tile in VRAM, and the value corresponding to that index is the index of the next frame of animation. If a tile is not animated, just set the value equal to the same value as that index, essentially defining a 1-\/frame animation. For example, here is how you would define a 3-\/frame animation that cycles through tile graphics 0, 1, and 3\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{xist\_tile\_animations[0]\ =\ 1;}
+\DoxyCodeLine{xist\_tile\_animations[1]\ =\ 2;}
+\DoxyCodeLine{xist\_tile\_animations[2]\ =\ 0;}
+
+\end{DoxyCode}
+ \Hypertarget{xist__tiles_8h_a66ef78f20eaa489135626897073aab3d}\label{xist__tiles_8h_a66ef78f20eaa489135626897073aab3d} 
+\index{xist\_tiles.h@{xist\_tiles.h}!xist\_tilemap\_height\_pix@{xist\_tilemap\_height\_pix}}
+\index{xist\_tilemap\_height\_pix@{xist\_tilemap\_height\_pix}!xist\_tiles.h@{xist\_tiles.h}}
+\doxysubsubsection{\texorpdfstring{xist\_tilemap\_height\_pix}{xist\_tilemap\_height\_pix}}
+{\footnotesize\ttfamily unsigned short xist\+\_\+tilemap\+\_\+height\+\_\+pix\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Acts as a virtual parameter for the function {\ttfamily xist\+\_\+scroll\+\_\+camera}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__tiles_8h_a0c3dd1f728ce5f5b929278b7c6e5dd2b}{xist\+\_\+scroll\+\_\+camera}
+\end{DoxySeeAlso}
+Sets the bottom boundary for the viewable area of tile layer 0; i.\+e., the camera/viewport will not scroll past the edge defined by this value. If you want the entire vertical area of layer 0 to be viewable, set the value of this variable to LAYER\+\_\+0\+\_\+\+MAPBASE\+\_\+\+HEIGHT \texorpdfstring{$\ast$}{*} LAYER\+\_\+0\+\_\+\+TILE\+\_\+\+DIMENSIONS. Its minimum value should be XIST\+\_\+\+RESOLUTION\+\_\+\+HEIGHT. \Hypertarget{xist__tiles_8h_abc443a51b9b0436a1023e25afc581796}\label{xist__tiles_8h_abc443a51b9b0436a1023e25afc581796} 
+\index{xist\_tiles.h@{xist\_tiles.h}!xist\_tilemap\_width\_pix@{xist\_tilemap\_width\_pix}}
+\index{xist\_tilemap\_width\_pix@{xist\_tilemap\_width\_pix}!xist\_tiles.h@{xist\_tiles.h}}
+\doxysubsubsection{\texorpdfstring{xist\_tilemap\_width\_pix}{xist\_tilemap\_width\_pix}}
+{\footnotesize\ttfamily unsigned short xist\+\_\+tilemap\+\_\+width\+\_\+pix\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Acts as a virtual parameter for the function {\ttfamily xist\+\_\+scroll\+\_\+camera}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__tiles_8h_a0c3dd1f728ce5f5b929278b7c6e5dd2b}{xist\+\_\+scroll\+\_\+camera}
+\end{DoxySeeAlso}
+Sets the right boundary for the viewable area of tile layer 0; i.\+e., the camera/viewport will not scroll past the edge defined by this value. If you want the entire horizontal area of layer 0 to be viewable, set the value of this variable to LAYER\+\_\+0\+\_\+\+MAPBASE\+\_\+\+WIDTH \texorpdfstring{$\ast$}{*} LAYER\+\_\+0\+\_\+\+TILE\+\_\+\+DIMENSIONS. Its minimum value should be XIST\+\_\+\+RESOLUTION\+\_\+\+WIDTH. 

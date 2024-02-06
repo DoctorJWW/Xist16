@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['xist_5fanimate_5fmap_5ftiles_0',['xist_animate_map_tiles',['../xist__tiles_8h.html#a03ce66d667fd7f99146710f0bb8911d0',1,'xist_tiles.c']]],
+  ['xist_5fclear_5ftext_1',['xist_clear_text',['../xist__text_8h.html#aad24022acaf449c720d5292d9f03abaf',1,'xist_text.c']]],
+  ['xist_5fconvert_5flong_5fto_5fascii_5farray_2',['xist_convert_long_to_ascii_array',['../xist__utils_8h.html#aba7b15bf170f6bdbe72ff1298c2513c1',1,'xist_utils.c']]],
+  ['xist_5fcopy_5fhighram_5fto_5fvram_3',['xist_copy_highram_to_vram',['../xist__mem_8h.html#ade5e8940fa129c1404fde6510599c66e',1,'xist_mem.c']]],
+  ['xist_5fcopy_5fhighram_5fto_5fvram_5fpartial_4',['xist_copy_highram_to_vram_partial',['../xist__mem_8h.html#a96ff5c1ce06973414cc04de58267fa05',1,'xist_mem.c']]],
+  ['xist_5fcopy_5fhighram_5fto_5fvram_5fusing_5fmetadata_5',['xist_copy_highram_to_vram_using_metadata',['../xist__mem_8h.html#ac2122eeabf2bcbbb499a98f89993c89b',1,'xist_mem.c']]],
+  ['xist_5fdraw_5ftext_6',['xist_draw_text',['../xist__text_8h.html#ae3f468d1a6bac47d1cf5f3ed2be34032',1,'xist_text.c']]],
+  ['xist_5fdraw_5ftypewriter_5ftext_7',['xist_draw_typewriter_text',['../xist__text_8h.html#a8e95bb68f12ab5151dbad2212eb06c6a',1,'xist_text.c']]],
+  ['xist_5fget_5fjoypad_8',['xist_get_joypad',['../xist__input_8h.html#a2d9213eb35dbeccca16d535a6e6aaa41',1,'xist_input.c']]],
+  ['xist_5fget_5fmouse_5fbuttons_9',['xist_get_mouse_buttons',['../xist__input_8h.html#a9b6673fcda73a01245e0bf4b0291ffcf',1,'xist_input.c']]],
+  ['xist_5fget_5fmouse_5fbuttons_5fget_5ffalling_5fedges_10',['xist_get_mouse_buttons_get_falling_edges',['../xist__input_8h.html#a6cc9b04b7300a82ee96cc55d0e94052f',1,'xist_input.c']]],
+  ['xist_5finitialize_5ftext_5ftiles_11',['xist_initialize_text_tiles',['../xist__text_8h.html#a7f70be91b3f01483155b20cb0e1e8176',1,'xist_text.c']]],
+  ['xist_5finitialize_5ftiles_12',['xist_initialize_tiles',['../xist__tiles_8h.html#aee326c92d69f2f2332f8ab473ca6e445',1,'xist_tiles.c']]],
+  ['xist_5fjoypad_5fget_5ffalling_5fedges_13',['xist_joypad_get_falling_edges',['../xist__input_8h.html#ac56e694a1ffb0ecd9ae7f6ef0dfc1975',1,'xist_input.c']]],
+  ['xist_5fload_5ffile_5fto_5fhighram_14',['xist_load_file_to_highram',['../xist__mem_8h.html#a176931c046bf44556228d2a295ea5264',1,'xist_mem.c']]],
+  ['xist_5fload_5fgraphic_15',['xist_load_graphic',['../xist__gfx_8h.html#aca5193415b2d48a050cbc92f68605bca',1,'xist_gfx.c']]],
+  ['xist_5fprepare_5fsprite_16',['xist_prepare_sprite',['../xist__gfx_8h.html#ac5738af259b2b05733f74040d2f6b357',1,'xist_gfx.c']]],
+  ['xist_5fprocess_5fsprites_17',['xist_process_sprites',['../xist__gfx_8h.html#a9c360512d685d4d9e3910cdda0b11dbd',1,'xist_gfx.c']]],
+  ['xist_5frand_18',['xist_rand',['../xist__utils_8h.html#ac86d113141fded8e7726821a0d84948a',1,'xist_utils.c']]],
+  ['xist_5freplace_5fsubstring_19',['xist_replace_substring',['../xist__text_8h.html#ae393abe378631edcbcdda55a6f53af49',1,'xist_text.c']]],
+  ['xist_5freset_5ftypewriter_5fcounters_20',['xist_reset_typewriter_counters',['../xist__text_8h.html#a55e874850dd9cf78e587eac0f2c68fda',1,'xist_text.c']]],
+  ['xist_5fscroll_5fcamera_21',['xist_scroll_camera',['../xist__tiles_8h.html#a0c3dd1f728ce5f5b929278b7c6e5dd2b',1,'xist_tiles.c']]],
+  ['xist_5fupdate_5fmouse_5fposition_22',['xist_update_mouse_position',['../xist__input_8h.html#a6e61b05c6bfa801cad8e83a7c8b345bc',1,'xist_input.c']]],
+  ['xist_5fupdate_5fsprite_5fposition_23',['xist_update_sprite_position',['../xist__gfx_8h.html#afd81cc6f6d79da46832025f2b133fd00',1,'xist_gfx.c']]],
+  ['xist_5fwait_24',['xist_wait',['../xist__utils_8h.html#ae0e973c34dfc2062b912fd60c4815bad',1,'xist_utils.c']]]
+];

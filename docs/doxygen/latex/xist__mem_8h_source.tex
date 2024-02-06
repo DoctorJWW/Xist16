@@ -1,0 +1,54 @@
+\doxysection{xist\+\_\+mem.\+h}
+\hypertarget{xist__mem_8h_source}{}\label{xist__mem_8h_source}\index{inc/xist\_mem.h@{inc/xist\_mem.h}}
+\mbox{\hyperlink{xist__mem_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ XIST\_MEM\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ XIST\_MEM\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{xist__utils_8h}{xist\_utils.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ BANK\_NUM\ (*(unsigned\ char\ *)0x00)}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ R0\ (*(unsigned\ short\ *)0x02)}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ R1\ (*(unsigned\ short\ *)0x04)}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ R2\ (*(unsigned\ short\ *)0x06)}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ XIST\_BANKED\_RAM\_ADDRESS\ \ \ \ \ 0xA000UL}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ XIST\_LAYER\_1\_TILE\_BASE\ \ \ \ \ \ 0x0000UL}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ XIST\_LAYER\_1\_MAPBASE\ \ \ \ \ \ \ \ 0x2000UL}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ XIST\_LAYER\_0\_MAPBASE\ \ \ \ \ \ \ \ 0x3000UL}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ XIST\_LAYER\_0\_TILE\_BASE\ \ \ \ \ \ 0x5000UL}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ XIST\_VRAM\_SPRITE\_IMAGE\_DATA\ 0x9000UL}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ XIST\_VRAM\_SPRITE\_0\_ADDRESS\ \ 0x1FC00UL}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ XIST\_VRAM\_SPRITE\_1\_ADDRESS\ \ 0x1FC08UL}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ XIST\_SPRITE\_METADATA\_BANK\ 63}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{xist__mem_8h_a176931c046bf44556228d2a295ea5264}{xist\_load\_file\_to\_highram}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ bank);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ xist\_load\_file\_to\_vram(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BOOL\ to\_upper,}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ vram\_address);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{xist__mem_8h_ade5e8940fa129c1404fde6510599c66e}{xist\_copy\_highram\_to\_vram}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ vram\_address,}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ bank,}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ mem\_offset,}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ num\_bytes);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00086\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{xist__mem_8h_a96ff5c1ce06973414cc04de58267fa05}{xist\_copy\_highram\_to\_vram\_partial}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ vram\_address,}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ highram\_bank,}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ x\_offset,}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ y\_offset,}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ gfx\_width,}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ gfx\_height,}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ h\_width);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00108\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{xist__mem_8h_ac2122eeabf2bcbbb499a98f89993c89b}{xist\_copy\_highram\_to\_vram\_using\_metadata}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ vram\_address,}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ highram\_bank,}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ metadata\_index);}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,83 @@
+\doxysection{xist\+\_\+gfx.\+h}
+\hypertarget{xist__gfx_8h_source}{}\label{xist__gfx_8h_source}\index{inc/xist\_gfx.h@{inc/xist\_gfx.h}}
+\mbox{\hyperlink{xist__gfx_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ XIST\_GFX\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ XIST\_GFX\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{xist__utils_8h}{xist\_utils.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ XIST\_MAX\_SPRITES\ 64}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ XIST\_SPRITE\_ACTIVE\ \ \ 0b00000001}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ XIST\_SPRITE\_REPEATS\ \ 0b00000010}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ XIST\_SPRITE\_FINISHED\ 0b00000100}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ XIST\_SPRITE\_PALETTE\_OFFSET\_1\ \ 0b00000001}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ XIST\_SPRITE\_PALETTE\_OFFSET\_2\ \ 0b00000010}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ XIST\_SPRITE\_PALETTE\_OFFSET\_3\ \ 0b00000100}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ XIST\_SPRITE\_PALETTE\_OFFSET\_4\ \ 0b00001000}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_xist_animation}{XistAnimation}}\ \{}
+\DoxyCodeLine{00060\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{struct_xist_animation_a11778809d3e4ff804ad6d0f2f4507571}{first\_frame\_address}}[\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\_MAX\_SPRITES}}];\ }
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{struct_xist_animation_ade70cf189479f961714f816c6af4b686}{address\_offset}}[\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\_MAX\_SPRITES}}];\ }
+\DoxyCodeLine{00062\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_xist_animation_a6420a0beee60fcecffc8efac9125cb90}{num\_frames}}[\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\_MAX\_SPRITES}}];\ }
+\DoxyCodeLine{00063\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_xist_animation_abd784d2275d61369cae8a631fb776996}{current\_frame}}[\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\_MAX\_SPRITES}}];\ }
+\DoxyCodeLine{00064\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_xist_animation_a15937db3ab52518e2b42f0e1c29aa9ed}{frame\_delay}}[\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\_MAX\_SPRITES}}];\ }
+\DoxyCodeLine{00065\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_xist_animation_a89d910d31975a2d75b3191fee88154d8}{frame\_timer}}[\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\_MAX\_SPRITES}}];\ }
+\DoxyCodeLine{00066\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_xist_animation_a279d459b8c19b7df399bfb82b831cdb2}{bitmask}}[\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\_MAX\_SPRITES}}];\ }
+\DoxyCodeLine{00067\ \ \ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{struct_xist_animation_a4b9a57fd60de024db4666e1c126e85aa}{x\_pos}}[\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\_MAX\_SPRITES}}];\ }
+\DoxyCodeLine{00068\ \ \ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{struct_xist_animation_a5d65d74e943e1d02d1464beee2d1c0c6}{y\_pos}}[\mbox{\hyperlink{xist__gfx_8h_adcc5495c14ab668eabb7e35d5f3fac69}{XIST\_MAX\_SPRITES}}];\ }
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_xist_graphics_metadata}{XistGraphicsMetadata}}\ \{}
+\DoxyCodeLine{00075\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_xist_graphics_metadata_ac10677e46bd91beef84fae85e125aad3}{filename}}[4];\ }
+\DoxyCodeLine{00076\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_xist_graphics_metadata_a79a12d16199bf33692b310cef22399c5}{x\_offset}};\ }
+\DoxyCodeLine{00077\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_xist_graphics_metadata_ad4a3df5aba6c3eb3f0e8ab99f3a06a1a}{y\_offset}};\ }
+\DoxyCodeLine{00078\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_xist_graphics_metadata_a34d94aa52339d1f0be23a3ee345e5e4a}{width}};\ }
+\DoxyCodeLine{00079\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_xist_graphics_metadata_af5cc03812a0bbf7929dcbcb58b754e39}{height}};\ }
+\DoxyCodeLine{00080\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_xist_graphics_metadata_a94c97322ed2053ed35deb662bf6b4dd3}{total\_width}};\ }
+\DoxyCodeLine{00081\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_xist_graphics_metadata_aaf1c93647d54fa8518f9ae96ef0d806c}{num\_frames}};\ }
+\DoxyCodeLine{00082\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_xist_graphics_metadata_ade208e7e26100a1466f583835d8e5e53}{frame\_delay}};\ }
+\DoxyCodeLine{00083\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_xist_graphics_metadata_a4e64dfa3e00d9e6ad02839789b3e65b4}{bitmask}};\ }
+\DoxyCodeLine{00084\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_xist_graphics_metadata_a978bfe31ea6debd8bfb85f435c50386e}{byte\_6}};\ }
+\DoxyCodeLine{00085\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_xist_graphics_metadata_a6f6d1f0fe491887bc1173c932afa182f}{byte\_7}};\ }
+\DoxyCodeLine{00086\ \};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{extern}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_xist_animation}{XistAnimation}}\ \mbox{\hyperlink{xist__gfx_8h_a39646b08e3a5283401bfbc580c89e75c}{xist\_sprite\_bank}};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00099\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{xist__gfx_8h_a38c44d9910132c9400e838f9cb54fa79}{xist\_proc\_sprite\_start\_idx}};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00107\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{xist__gfx_8h_abf92565b3e766d0ec2392e51722bcb5c}{xist\_proc\_sprite\_end\_idx}};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00115\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{xist__gfx_8h_ab133cdd9f230931ccc3ae10387fb4d5d}{xist\_curr\_sprite\_idx}};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00123\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{xist__gfx_8h_ab7ca4cf1f0f8eed30274d3eb4951b1a6}{xist\_curr\_sprite\_x\_pos}};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00131\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{xist__gfx_8h_ae55f5080fde95b221a7487357f7c0c2c}{xist\_curr\_sprite\_y\_pos}};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00146\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{xist__gfx_8h_a9c360512d685d4d9e3910cdda0b11dbd}{xist\_process\_sprites}}();}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00171\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{xist__gfx_8h_aca5193415b2d48a050cbc92f68605bca}{xist\_load\_graphic}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ metadata\_index,}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BOOL\ to\_highram,}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ to\_highram\_bank,}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BOOL\ to\_upper\_vram,}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ vram\_address);}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00214\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{xist__gfx_8h_ac5738af259b2b05733f74040d2f6b357}{xist\_prepare\_sprite}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ metadata\_index,}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BOOL\ copy\_to\_vram,}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ vram\_address,}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ highram\_bank,}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ sprite\_index,}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{struct_xist_animation_a4b9a57fd60de024db4666e1c126e85aa}{x\_pos}},}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{struct_xist_animation_a5d65d74e943e1d02d1464beee2d1c0c6}{y\_pos}},}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ add\_bitmask);}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00238\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{xist__gfx_8h_afd81cc6f6d79da46832025f2b133fd00}{xist\_update\_sprite\_position}}();}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00240\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

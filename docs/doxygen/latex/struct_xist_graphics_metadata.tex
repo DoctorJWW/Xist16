@@ -1,0 +1,113 @@
+\doxysection{Xist\+Graphics\+Metadata Struct Reference}
+\hypertarget{struct_xist_graphics_metadata}{}\label{struct_xist_graphics_metadata}\index{XistGraphicsMetadata@{XistGraphicsMetadata}}
+
+
+Contains metadata needed for Xist16 to load and parse graphical data.  
+
+
+
+
+{\ttfamily \#include $<$xist\+\_\+gfx.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{struct_xist_graphics_metadata_ac10677e46bd91beef84fae85e125aad3}{filename}} \mbox{[}4\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{struct_xist_graphics_metadata_a79a12d16199bf33692b310cef22399c5}{x\+\_\+offset}}
+\item 
+unsigned char \mbox{\hyperlink{struct_xist_graphics_metadata_ad4a3df5aba6c3eb3f0e8ab99f3a06a1a}{y\+\_\+offset}}
+\item 
+unsigned char \mbox{\hyperlink{struct_xist_graphics_metadata_a34d94aa52339d1f0be23a3ee345e5e4a}{width}}
+\item 
+unsigned char \mbox{\hyperlink{struct_xist_graphics_metadata_af5cc03812a0bbf7929dcbcb58b754e39}{height}}
+\item 
+unsigned char \mbox{\hyperlink{struct_xist_graphics_metadata_a94c97322ed2053ed35deb662bf6b4dd3}{total\+\_\+width}}
+\item 
+unsigned char \mbox{\hyperlink{struct_xist_graphics_metadata_aaf1c93647d54fa8518f9ae96ef0d806c}{num\+\_\+frames}}
+\item 
+unsigned char \mbox{\hyperlink{struct_xist_graphics_metadata_ade208e7e26100a1466f583835d8e5e53}{frame\+\_\+delay}}
+\item 
+unsigned char \mbox{\hyperlink{struct_xist_graphics_metadata_a4e64dfa3e00d9e6ad02839789b3e65b4}{bitmask}}
+\item 
+unsigned char \mbox{\hyperlink{struct_xist_graphics_metadata_a978bfe31ea6debd8bfb85f435c50386e}{byte\+\_\+6}}
+\item 
+unsigned char \mbox{\hyperlink{struct_xist_graphics_metadata_a6f6d1f0fe491887bc1173c932afa182f}{byte\+\_\+7}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains metadata needed for Xist16 to load and parse graphical data. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{struct_xist_graphics_metadata_a4e64dfa3e00d9e6ad02839789b3e65b4}\label{struct_xist_graphics_metadata_a4e64dfa3e00d9e6ad02839789b3e65b4} 
+\index{XistGraphicsMetadata@{XistGraphicsMetadata}!bitmask@{bitmask}}
+\index{bitmask@{bitmask}!XistGraphicsMetadata@{XistGraphicsMetadata}}
+\doxysubsubsection{\texorpdfstring{bitmask}{bitmask}}
+{\footnotesize\ttfamily unsigned char Xist\+Graphics\+Metadata\+::bitmask}
+
+bytes from low (right) to high (left)\+: Active, Repeats, Finished animating -\/-\/---FRA \Hypertarget{struct_xist_graphics_metadata_a978bfe31ea6debd8bfb85f435c50386e}\label{struct_xist_graphics_metadata_a978bfe31ea6debd8bfb85f435c50386e} 
+\index{XistGraphicsMetadata@{XistGraphicsMetadata}!byte\_6@{byte\_6}}
+\index{byte\_6@{byte\_6}!XistGraphicsMetadata@{XistGraphicsMetadata}}
+\doxysubsubsection{\texorpdfstring{byte\_6}{byte\_6}}
+{\footnotesize\ttfamily unsigned char Xist\+Graphics\+Metadata\+::byte\+\_\+6}
+
+Byte 6 of the Commander X16 sprite metadata \Hypertarget{struct_xist_graphics_metadata_a6f6d1f0fe491887bc1173c932afa182f}\label{struct_xist_graphics_metadata_a6f6d1f0fe491887bc1173c932afa182f} 
+\index{XistGraphicsMetadata@{XistGraphicsMetadata}!byte\_7@{byte\_7}}
+\index{byte\_7@{byte\_7}!XistGraphicsMetadata@{XistGraphicsMetadata}}
+\doxysubsubsection{\texorpdfstring{byte\_7}{byte\_7}}
+{\footnotesize\ttfamily unsigned char Xist\+Graphics\+Metadata\+::byte\+\_\+7}
+
+Byte 7 of the Commander X16 sprite metadata \Hypertarget{struct_xist_graphics_metadata_ac10677e46bd91beef84fae85e125aad3}\label{struct_xist_graphics_metadata_ac10677e46bd91beef84fae85e125aad3} 
+\index{XistGraphicsMetadata@{XistGraphicsMetadata}!filename@{filename}}
+\index{filename@{filename}!XistGraphicsMetadata@{XistGraphicsMetadata}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily char Xist\+Graphics\+Metadata\+::filename\mbox{[}4\mbox{]}}
+
+Name of the file that contains the graphical data, minus the .IMG file extension. \Hypertarget{struct_xist_graphics_metadata_ade208e7e26100a1466f583835d8e5e53}\label{struct_xist_graphics_metadata_ade208e7e26100a1466f583835d8e5e53} 
+\index{XistGraphicsMetadata@{XistGraphicsMetadata}!frame\_delay@{frame\_delay}}
+\index{frame\_delay@{frame\_delay}!XistGraphicsMetadata@{XistGraphicsMetadata}}
+\doxysubsubsection{\texorpdfstring{frame\_delay}{frame\_delay}}
+{\footnotesize\ttfamily unsigned char Xist\+Graphics\+Metadata\+::frame\+\_\+delay}
+
+The number of game ticks to show each frame of animation for. \Hypertarget{struct_xist_graphics_metadata_af5cc03812a0bbf7929dcbcb58b754e39}\label{struct_xist_graphics_metadata_af5cc03812a0bbf7929dcbcb58b754e39} 
+\index{XistGraphicsMetadata@{XistGraphicsMetadata}!height@{height}}
+\index{height@{height}!XistGraphicsMetadata@{XistGraphicsMetadata}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily unsigned char Xist\+Graphics\+Metadata\+::height}
+
+The height in pixels of each frame of animation for this graphic (must all be the same). \Hypertarget{struct_xist_graphics_metadata_aaf1c93647d54fa8518f9ae96ef0d806c}\label{struct_xist_graphics_metadata_aaf1c93647d54fa8518f9ae96ef0d806c} 
+\index{XistGraphicsMetadata@{XistGraphicsMetadata}!num\_frames@{num\_frames}}
+\index{num\_frames@{num\_frames}!XistGraphicsMetadata@{XistGraphicsMetadata}}
+\doxysubsubsection{\texorpdfstring{num\_frames}{num\_frames}}
+{\footnotesize\ttfamily unsigned char Xist\+Graphics\+Metadata\+::num\+\_\+frames}
+
+This graphic\textquotesingle{}s total frames of animation. \Hypertarget{struct_xist_graphics_metadata_a94c97322ed2053ed35deb662bf6b4dd3}\label{struct_xist_graphics_metadata_a94c97322ed2053ed35deb662bf6b4dd3} 
+\index{XistGraphicsMetadata@{XistGraphicsMetadata}!total\_width@{total\_width}}
+\index{total\_width@{total\_width}!XistGraphicsMetadata@{XistGraphicsMetadata}}
+\doxysubsubsection{\texorpdfstring{total\_width}{total\_width}}
+{\footnotesize\ttfamily unsigned char Xist\+Graphics\+Metadata\+::total\+\_\+width}
+
+The total width in pixels of the entire image that contains this graphic. \Hypertarget{struct_xist_graphics_metadata_a34d94aa52339d1f0be23a3ee345e5e4a}\label{struct_xist_graphics_metadata_a34d94aa52339d1f0be23a3ee345e5e4a} 
+\index{XistGraphicsMetadata@{XistGraphicsMetadata}!width@{width}}
+\index{width@{width}!XistGraphicsMetadata@{XistGraphicsMetadata}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily unsigned char Xist\+Graphics\+Metadata\+::width}
+
+The width in pixels of each frame of animation for this graphic (must all be the same). \Hypertarget{struct_xist_graphics_metadata_a79a12d16199bf33692b310cef22399c5}\label{struct_xist_graphics_metadata_a79a12d16199bf33692b310cef22399c5} 
+\index{XistGraphicsMetadata@{XistGraphicsMetadata}!x\_offset@{x\_offset}}
+\index{x\_offset@{x\_offset}!XistGraphicsMetadata@{XistGraphicsMetadata}}
+\doxysubsubsection{\texorpdfstring{x\_offset}{x\_offset}}
+{\footnotesize\ttfamily unsigned char Xist\+Graphics\+Metadata\+::x\+\_\+offset}
+
+Number of pixels from the left side of the image where the subimage begins. \Hypertarget{struct_xist_graphics_metadata_ad4a3df5aba6c3eb3f0e8ab99f3a06a1a}\label{struct_xist_graphics_metadata_ad4a3df5aba6c3eb3f0e8ab99f3a06a1a} 
+\index{XistGraphicsMetadata@{XistGraphicsMetadata}!y\_offset@{y\_offset}}
+\index{y\_offset@{y\_offset}!XistGraphicsMetadata@{XistGraphicsMetadata}}
+\doxysubsubsection{\texorpdfstring{y\_offset}{y\_offset}}
+{\footnotesize\ttfamily unsigned char Xist\+Graphics\+Metadata\+::y\+\_\+offset}
+
+Number of pixels from the top of the image where the subimage begins. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{xist__gfx_8h}{xist\+\_\+gfx.\+h}}\end{DoxyCompactItemize}

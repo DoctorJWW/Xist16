@@ -8,6 +8,9 @@ The goal of this library is to jump-start the development of games (and other gr
 
 Please view the Xist16Manual.pdf file in the docs folder for installation instructions and a thorough tutorial-like explanation for how to use this library to jump-start the development of Commander X16 games written in C using the cc65 compiler suite. You will also find Doxygen documentation in the docs folder.
 
+You can also find a video tutorial for how to get started using the library here:
+https://www.youtube.com/watch?v=0EhJtpzhRpA
+
 ## Authors
 
 * Dr.J (drjstudio.com)

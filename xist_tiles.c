@@ -52,7 +52,6 @@ void xist_initialize_tiles() {
   layer_0_height_bitmask = layer_0_height_bitmask_lookup[(LAYER_0_MAPBASE_HEIGHT>>5)-1];
   
   layer_0_byte4_bitmask = ((XIST_LAYER_0_TILE_BASE & 0x1FFFF) >> 9) & 0xFC;
-  layer_0_byte4_bitmask = 0b00101011;
   layer_0_byte4_bitmask |= layer_0_tile_dimensions_lookup[(LAYER_0_TILE_DIMENSIONS>>3)-1];
   
   layer_0_screen_tile_width = XIST_RESOLUTION_WIDTH / LAYER_0_TILE_DIMENSIONS;

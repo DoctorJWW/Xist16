@@ -5,6 +5,7 @@
 
 unsigned char xist_proc_sprite_start_idx, xist_proc_sprite_end_idx, xist_curr_sprite_idx;
 signed short xist_curr_sprite_x_pos, xist_curr_sprite_y_pos;
+unsigned char xist_curr_sprite_byte_6;
 struct XistAnimation xist_sprite_bank;
 
 void xist_process_sprites() {
@@ -179,4 +180,13 @@ void xist_update_sprite_position() {
   VERA.data0 = xist_curr_sprite_x_pos>>8;
   VERA.data0 = xist_curr_sprite_y_pos;
   VERA.data0 = xist_curr_sprite_y_pos>>8;
+}
+
+
+void xist_update_sprite_parameters() {
+  unsigned long sprite_address = XIST_VRAM_SPRITE_0_ADDRESS + (xist_curr_sprite_idx * 8) + 6;
+  VERA.address = (sprite_address);
+  VERA.address_hi = (sprite_address)>>16;
+  VERA.address_hi |= 0b10000;
+  VERA.data0 = xist_curr_sprite_byte_6;
 }

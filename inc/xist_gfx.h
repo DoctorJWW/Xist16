@@ -130,6 +130,14 @@ extern signed short xist_curr_sprite_x_pos;
  */
 extern signed short xist_curr_sprite_y_pos;
 
+/** \var unsigned char xist_curr_sprite_byte_6
+ *  \brief Acts as a virtual parameter for the function `xist_update_sprite_parameters`.
+ *  \see xist_update_sprite_parameters
+ *
+ * Sets the new byte 6 of the CX16 sprite metadata for the sprite to be updated.
+ */
+extern unsigned char xist_curr_sprite_byte_6;
+
 /**
  * \fn void xist_process_sprites(void)
  * \brief Animates all of the sprites in `xist_sprite_bank` within the supplied indices (inclusive).
@@ -236,5 +244,18 @@ void xist_prepare_sprite(unsigned short metadata_index,
  * \return   void
  */
 void xist_update_sprite_position();
+
+/**
+ * \fn void xist_update_sprite_parameters(void)
+ * \brief Updates byte 6 of the provided sprite.
+ * \see xist_curr_sprite_idx
+ * \see xist_curr_sprite_byte_6
+ *
+ * As a performance optimization, this function uses global variables as virtual parameters.
+ * Updates the 6th byte of the CX16 sprite metadata in VRAM (collision mask, z-depth, v-flip, and h-flip).
+ *
+ * \return   void
+ */
+void xist_update_sprite_parameters();
 
 #endif

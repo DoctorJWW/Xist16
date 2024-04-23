@@ -144,6 +144,9 @@ Functions</h2></td></tr>
 <tr class="memitem:afd81cc6f6d79da46832025f2b133fd00" id="r_afd81cc6f6d79da46832025f2b133fd00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd81cc6f6d79da46832025f2b133fd00">xist_update_sprite_position</a> ()</td></tr>
 <tr class="memdesc:afd81cc6f6d79da46832025f2b133fd00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the position of the provided sprite.  <br /></td></tr>
 <tr class="separator:afd81cc6f6d79da46832025f2b133fd00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a8d168227d87805dc8d90d72d77fe29" id="r_a0a8d168227d87805dc8d90d72d77fe29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a8d168227d87805dc8d90d72d77fe29">xist_update_sprite_parameters</a> ()</td></tr>
+<tr class="memdesc:a0a8d168227d87805dc8d90d72d77fe29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates byte 6 of the provided sprite.  <br /></td></tr>
+<tr class="separator:a0a8d168227d87805dc8d90d72d77fe29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -166,6 +169,9 @@ struct <a class="el" href="struct_xist_animation.html">XistAnimation</a>&#160;</
 <tr class="memitem:ae55f5080fde95b221a7487357f7c0c2c" id="r_ae55f5080fde95b221a7487357f7c0c2c"><td class="memItemLeft" align="right" valign="top">signed short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae55f5080fde95b221a7487357f7c0c2c">xist_curr_sprite_y_pos</a></td></tr>
 <tr class="memdesc:ae55f5080fde95b221a7487357f7c0c2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acts as a virtual parameter for the function <code>xist_update_sprite_position</code>.  <br /></td></tr>
 <tr class="separator:ae55f5080fde95b221a7487357f7c0c2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e78fb65d9b2729608996e82a8750579" id="r_a9e78fb65d9b2729608996e82a8750579"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e78fb65d9b2729608996e82a8750579">xist_curr_sprite_byte_6</a></td></tr>
+<tr class="memdesc:a9e78fb65d9b2729608996e82a8750579"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acts as a virtual parameter for the function <code>xist_update_sprite_parameters</code>.  <br /></td></tr>
+<tr class="separator:a9e78fb65d9b2729608996e82a8750579"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Graphics functionality. </p>
@@ -352,6 +358,30 @@ struct <a class="el" href="struct_xist_animation.html">XistAnimation</a>&#160;</
 
 </div>
 </div>
+<a id="a0a8d168227d87805dc8d90d72d77fe29" name="a0a8d168227d87805dc8d90d72d77fe29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a8d168227d87805dc8d90d72d77fe29">&#9670;&#160;</a></span>xist_update_sprite_parameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void xist_update_sprite_parameters </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates byte 6 of the provided sprite. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#ab133cdd9f230931ccc3ae10387fb4d5d" title="Acts as a virtual parameter for the function xist_update_sprite_position.">xist_curr_sprite_idx</a> </dd>
+<dd>
+<a class="el" href="#a9e78fb65d9b2729608996e82a8750579" title="Acts as a virtual parameter for the function xist_update_sprite_parameters.">xist_curr_sprite_byte_6</a></dd></dl>
+<p>As a performance optimization, this function uses global variables as virtual parameters. Updates the 6th byte of the CX16 sprite metadata in VRAM (collision mask, z-depth, v-flip, and h-flip).</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
 <a id="afd81cc6f6d79da46832025f2b133fd00" name="afd81cc6f6d79da46832025f2b133fd00"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afd81cc6f6d79da46832025f2b133fd00">&#9670;&#160;</a></span>xist_update_sprite_position()</h2>
 
@@ -379,6 +409,32 @@ struct <a class="el" href="struct_xist_animation.html">XistAnimation</a>&#160;</
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a9e78fb65d9b2729608996e82a8750579" name="a9e78fb65d9b2729608996e82a8750579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e78fb65d9b2729608996e82a8750579">&#9670;&#160;</a></span>xist_curr_sprite_byte_6</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char xist_curr_sprite_byte_6</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Acts as a virtual parameter for the function <code>xist_update_sprite_parameters</code>. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a0a8d168227d87805dc8d90d72d77fe29" title="Updates byte 6 of the provided sprite.">xist_update_sprite_parameters</a></dd></dl>
+<p>Sets the new byte 6 of the CX16 sprite metadata for the sprite to be updated. </p>
+
+</div>
+</div>
 <a id="ab133cdd9f230931ccc3ae10387fb4d5d" name="ab133cdd9f230931ccc3ae10387fb4d5d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab133cdd9f230931ccc3ae10387fb4d5d">&#9670;&#160;</a></span>xist_curr_sprite_idx</h2>
 

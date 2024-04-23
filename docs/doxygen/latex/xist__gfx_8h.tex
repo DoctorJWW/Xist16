@@ -48,7 +48,9 @@ void \mbox{\hyperlink{xist__gfx_8h_aca5193415b2d48a050cbc92f68605bca}{xist\+\_\+
 void \mbox{\hyperlink{xist__gfx_8h_ac5738af259b2b05733f74040d2f6b357}{xist\+\_\+prepare\+\_\+sprite}} (unsigned short metadata\+\_\+index, BOOL copy\+\_\+to\+\_\+vram, unsigned long vram\+\_\+address, unsigned char highram\+\_\+bank, unsigned char sprite\+\_\+index, signed short x\+\_\+pos, signed short y\+\_\+pos, unsigned char add\+\_\+bitmask)
 \begin{DoxyCompactList}\small\item\em Readies a sprite which has been loaded into high-\/\+RAM for display and animation. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{xist__gfx_8h_afd81cc6f6d79da46832025f2b133fd00}{xist\+\_\+update\+\_\+sprite\+\_\+position}} ()
-\begin{DoxyCompactList}\small\item\em Updates the position of the provided sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Updates the position of the provided sprite. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{xist__gfx_8h_a0a8d168227d87805dc8d90d72d77fe29}{xist\+\_\+update\+\_\+sprite\+\_\+parameters}} ()
+\begin{DoxyCompactList}\small\item\em Updates byte 6 of the provided sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -64,7 +66,9 @@ unsigned char \mbox{\hyperlink{xist__gfx_8h_ab133cdd9f230931ccc3ae10387fb4d5d}{x
 signed short \mbox{\hyperlink{xist__gfx_8h_ab7ca4cf1f0f8eed30274d3eb4951b1a6}{xist\+\_\+curr\+\_\+sprite\+\_\+x\+\_\+pos}}
 \begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the function {\ttfamily xist\+\_\+update\+\_\+sprite\+\_\+position}. \end{DoxyCompactList}\item 
 signed short \mbox{\hyperlink{xist__gfx_8h_ae55f5080fde95b221a7487357f7c0c2c}{xist\+\_\+curr\+\_\+sprite\+\_\+y\+\_\+pos}}
-\begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the function {\ttfamily xist\+\_\+update\+\_\+sprite\+\_\+position}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the function {\ttfamily xist\+\_\+update\+\_\+sprite\+\_\+position}. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{xist__gfx_8h_a9e78fb65d9b2729608996e82a8750579}{xist\+\_\+curr\+\_\+sprite\+\_\+byte\+\_\+6}}
+\begin{DoxyCompactList}\small\item\em Acts as a virtual parameter for the function {\ttfamily xist\+\_\+update\+\_\+sprite\+\_\+parameters}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -181,7 +185,27 @@ Animates all of the sprites in {\ttfamily xist\+\_\+sprite\+\_\+bank} within the
 
 \doxylink{xist__gfx_8h_abf92565b3e766d0ec2392e51722bcb5c}{xist\+\_\+proc\+\_\+sprite\+\_\+end\+\_\+idx}
 \end{DoxySeeAlso}
-As a performance optimization, this function uses global variables as virtual parameters. It performs all the necessary updates to the sprite metadata in {\ttfamily xist\+\_\+sprite\+\_\+bank} and the Commander X16\textquotesingle{}s metadata in VRAM (including updating the address where the graphics for the next frame of animation are stored in VRAM) necessary to animate all the sprites specified by the start and end indices. It ignores sprites that aren\textquotesingle{}t set to active or which have finished animating (the latter does not apply to sprites with repeating animations). \Hypertarget{xist__gfx_8h_afd81cc6f6d79da46832025f2b133fd00}\label{xist__gfx_8h_afd81cc6f6d79da46832025f2b133fd00} 
+As a performance optimization, this function uses global variables as virtual parameters. It performs all the necessary updates to the sprite metadata in {\ttfamily xist\+\_\+sprite\+\_\+bank} and the Commander X16\textquotesingle{}s metadata in VRAM (including updating the address where the graphics for the next frame of animation are stored in VRAM) necessary to animate all the sprites specified by the start and end indices. It ignores sprites that aren\textquotesingle{}t set to active or which have finished animating (the latter does not apply to sprites with repeating animations). \Hypertarget{xist__gfx_8h_a0a8d168227d87805dc8d90d72d77fe29}\label{xist__gfx_8h_a0a8d168227d87805dc8d90d72d77fe29} 
+\index{xist\_gfx.h@{xist\_gfx.h}!xist\_update\_sprite\_parameters@{xist\_update\_sprite\_parameters}}
+\index{xist\_update\_sprite\_parameters@{xist\_update\_sprite\_parameters}!xist\_gfx.h@{xist\_gfx.h}}
+\doxysubsubsection{\texorpdfstring{xist\_update\_sprite\_parameters()}{xist\_update\_sprite\_parameters()}}
+{\footnotesize\ttfamily void xist\+\_\+update\+\_\+sprite\+\_\+parameters (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Updates byte 6 of the provided sprite. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__gfx_8h_ab133cdd9f230931ccc3ae10387fb4d5d}{xist\+\_\+curr\+\_\+sprite\+\_\+idx} 
+
+\doxylink{xist__gfx_8h_a9e78fb65d9b2729608996e82a8750579}{xist\+\_\+curr\+\_\+sprite\+\_\+byte\+\_\+6}
+\end{DoxySeeAlso}
+As a performance optimization, this function uses global variables as virtual parameters. Updates the 6th byte of the CX16 sprite metadata in VRAM (collision mask, z-\/depth, v-\/flip, and h-\/flip).
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{xist__gfx_8h_afd81cc6f6d79da46832025f2b133fd00}\label{xist__gfx_8h_afd81cc6f6d79da46832025f2b133fd00} 
 \index{xist\_gfx.h@{xist\_gfx.h}!xist\_update\_sprite\_position@{xist\_update\_sprite\_position}}
 \index{xist\_update\_sprite\_position@{xist\_update\_sprite\_position}!xist\_gfx.h@{xist\_gfx.h}}
 \doxysubsubsection{\texorpdfstring{xist\_update\_sprite\_position()}{xist\_update\_sprite\_position()}}
@@ -206,7 +230,20 @@ void
 
 
 \doxysubsection{Variable Documentation}
-\Hypertarget{xist__gfx_8h_ab133cdd9f230931ccc3ae10387fb4d5d}\label{xist__gfx_8h_ab133cdd9f230931ccc3ae10387fb4d5d} 
+\Hypertarget{xist__gfx_8h_a9e78fb65d9b2729608996e82a8750579}\label{xist__gfx_8h_a9e78fb65d9b2729608996e82a8750579} 
+\index{xist\_gfx.h@{xist\_gfx.h}!xist\_curr\_sprite\_byte\_6@{xist\_curr\_sprite\_byte\_6}}
+\index{xist\_curr\_sprite\_byte\_6@{xist\_curr\_sprite\_byte\_6}!xist\_gfx.h@{xist\_gfx.h}}
+\doxysubsubsection{\texorpdfstring{xist\_curr\_sprite\_byte\_6}{xist\_curr\_sprite\_byte\_6}}
+{\footnotesize\ttfamily unsigned char xist\+\_\+curr\+\_\+sprite\+\_\+byte\+\_\+6\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Acts as a virtual parameter for the function {\ttfamily xist\+\_\+update\+\_\+sprite\+\_\+parameters}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{xist__gfx_8h_a0a8d168227d87805dc8d90d72d77fe29}{xist\+\_\+update\+\_\+sprite\+\_\+parameters}
+\end{DoxySeeAlso}
+Sets the new byte 6 of the CX16 sprite metadata for the sprite to be updated. \Hypertarget{xist__gfx_8h_ab133cdd9f230931ccc3ae10387fb4d5d}\label{xist__gfx_8h_ab133cdd9f230931ccc3ae10387fb4d5d} 
 \index{xist\_gfx.h@{xist\_gfx.h}!xist\_curr\_sprite\_idx@{xist\_curr\_sprite\_idx}}
 \index{xist\_curr\_sprite\_idx@{xist\_curr\_sprite\_idx}!xist\_gfx.h@{xist\_gfx.h}}
 \doxysubsubsection{\texorpdfstring{xist\_curr\_sprite\_idx}{xist\_curr\_sprite\_idx}}
